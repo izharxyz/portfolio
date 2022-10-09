@@ -1,7 +1,12 @@
+<script>
+    import Header from "$lib/portifolio/header.svelte";
+    import "../app.css";
+</script>
 
-<h1>
-    hi
-</h1>
+<div class="bg-bg text-white font-inter pb-12">
+    <Header/>
+</div>
+
 
 
     
