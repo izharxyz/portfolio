@@ -16,6 +16,7 @@ module.exports = {
         'badge': '#3F3F51',
         'input-border': '#565666',
         'input': '#2A2A35',
+        'secondary-text': '#8f8f8f',
         'jetblack': '#111111',
         'dimwhite': '#ececec',
         'neonblue': '#5452e2',

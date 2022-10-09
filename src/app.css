@@ -7,4 +7,10 @@
   src: url("/fonts/inter.ttf");
 }
 
-    
+.nav-dot:hover span {
+  opacity: 1;
+}
+
+html body {
+  @apply bg-bg;
+}
