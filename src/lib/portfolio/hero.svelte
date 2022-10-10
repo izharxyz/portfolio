@@ -28,7 +28,7 @@
                 <h2 class="font-extrabold text-4xl md:text-5xl lg:text-6xl text-secondary-text text-center md:text-left"> I'm an enthusiast who loves to code. </h2>
                 <h3 class="text-xl md:text-2xl lg:text-3xl text-center md:text-left mx-1 text-secondary-text mt-4">Welcome to my portfolio!</h3>
                 <div class="flex justify-center md:justify-start">
-                    <button class="py-2 px-6 bg-primary rounded-md text-white font-bold mt-10">Let's create something</button>
+                   <a href="#about"> <button class="py-2 px-6 bg-primary rounded-md text-white font-bold mt-10 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300">More about me</button> </a>
                 </div>
             </div> 
         </div>
