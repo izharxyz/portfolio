@@ -11,6 +11,8 @@ module.exports = {
         'bg': '#17171F',
         'selected-text': '#A3A3FF',
         'primary': '#3F3FFF',
+        'primary2': '#ff9f3f',
+        'primary3': '#3fff9f',
         'nav': '#404053',
         'secondary': '#9191A4',
         'badge': '#3F3F51',

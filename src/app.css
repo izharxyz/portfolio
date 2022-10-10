@@ -11,6 +11,6 @@
   opacity: 1;
 }
 
-html body {
-  @apply bg-bg;
+html {
+  @apply bg-bg scroll-smooth;
 }
