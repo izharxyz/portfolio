@@ -3,6 +3,7 @@
     import Hero from "$lib/portfolio/hero.svelte";
     import About from "$lib/portfolio/about.svelte";
     import Works from "$lib/portfolio/works.svelte";
+    import Contact from "$lib/portfolio/contact.svelte";
     import "../app.css";
 </script>
 <title>ZED.CODES</title>
@@ -11,6 +12,7 @@
     <Hero/>
     <About/>
     <Works/>
+    <Contact/>
 </div>
 
 
