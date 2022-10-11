@@ -7,7 +7,7 @@
         <span class="self-center font-bold whitespace-nowrap">ZED.CODES</span>
     </a>
     <div class="flex md:order-2">
-        <a href="#contact"><button type="button" class="px-6 py-2 bg-primary rounded-md font-bold transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300">  CONTACT </button></a>
+        <a href="#contact"><button type="button" class="px-3 py-1 md:px-6 md:py-2 bg-primary rounded-md font-bold transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300">  CONTACT </button></a>
         <button class="text-white cursor-pointer ml-4 border-none focus:outline-none md:hidden" class:open on:click={() => open = !open}>
             <svg width=32 height=24>
                 <line id="top" x1=0 y1=2  x2=32 y2=2/>
