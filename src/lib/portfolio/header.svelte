@@ -3,13 +3,13 @@
         <div class="text-lg font-bold"><a href="/"> ZED.CODES </a></div>
         <div class="hidden md:flex space-x-12 items-center">
             <!-- svelte-ignore a11y-invalid-attribute -->
-            <a href="#home" class="text-selected-text">HOME</a>
+            <a href="#home" class="hover:text-selected-text">HOME</a>
             <!-- svelte-ignore a11y-invalid-attribute -->
-            <a href="#about">ABOUT</a>
+            <a href="#about" class="hover:text-selected-text">ABOUT</a>
             <!-- svelte-ignore a11y-invalid-attribute -->
-            <a href="#work">WORK</a>
+            <a href="#work" class="hover:text-selected-text">WORK</a>
             <!-- svelte-ignore a11y-invalid-attribute -->
-            <a href="/blog">BLOG</a>
+            <a href="/blog" class="hover:text-selected-text">BLOG</a>
             <!-- svelte-ignore a11y-invalid-attribute -->
             <a href="#contact"> <button class="px-6 py-2 bg-primary rounded-md font-bold transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300"> CONTACT </button> </a>
         </div>
