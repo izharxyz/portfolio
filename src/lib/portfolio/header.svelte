@@ -4,7 +4,7 @@
 <nav class="py-6 px-2 sm:px-4 fixed w-full z-20 top-0 left-0 border-b border-gray-600 bg-bg">
     <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full text-sm md:text-md lg-text-xl">
     <a href="/" class="flex items-center">
-        <span class="self-center font-bold whitespace-nowrap">ZED.CODES</span>
+        <span class="self-center text-md md:text-lg font-bold whitespace-nowrap">ZED.CODES</span>
     </a>
     <div class="flex md:order-2">
         <a href="#contact"><button type="button" class="px-3 py-1 md:px-6 md:py-2 bg-primary rounded-md font-bold transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300">  CONTACT </button></a>
