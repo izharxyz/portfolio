@@ -5,10 +5,10 @@
 </script>
 <div class="container mt-40 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full" id="contact">
     <section class="w-full">
-        <h2 class="text-lg lg:ml-28 md:text-2xl lg:text-3xl text-center md:text-left  text-primary">Hire me.</h2>
-        <p class="text-lg lg:ml-28 lg:text-2xl md:text-left  text-secondary-text mt-4"> Feel free to contact me any time using any method given below.</p>
+        <h2 class="text-lg  md:text-2xl lg:text-3xl text-center md:text-left  text-primary">Hire me.</h2>
+        <p class="text-lg  lg:text-2xl md:text-left  text-secondary-text mt-4"> Feel free to contact me any time using any method given below.</p>
         <div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">  
-            <div class="space-y-12 lg:ml-28">
+            <div class="space-y-12 ">
                 <div>
                     <!-- svelte-ignore a11y-label-has-associated-control -->
                     <label class="text-dimwhite block mb-6 mt-5 text-lg font-bold">Name</label>

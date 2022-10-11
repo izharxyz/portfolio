@@ -1,5 +1,5 @@
 
-<div class="container mt-28 md:mt-60 mr-0 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+<div class="container mt-28 md:mt-60 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
     <section class="w-full">
         <h2 class="text-lg md:text-2xl lg:text-3xl text-center md:text-left mx-1 text-primary3" id="work">My works.</h2>
         <p class="text-lg lg:text-2xl md:text-left mx-1 text-secondary-text mt-2">

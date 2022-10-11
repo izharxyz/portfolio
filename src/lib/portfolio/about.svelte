@@ -8,7 +8,7 @@ import Typewriter from "svelte-typewriter";
             <img src="images/about.svg" alt="" class="w-full mt-2 md:mt-60 lg:mt-28 md:relative md:bottom-0 lg:lrft-0 -z-[1]">
         </div>
             
-        <div class="flex flex-nowrap lg:ml-20 justify-start max-w-2xl mt-0 md:my-36">
+        <div class="flex flex-nowrap  justify-start max-w-2xl mt-0 md:my-36">
             <div>
                 <h3 class="text-lg md:text-2xl lg:text-3xl text-center md:text-left mx-1 text-primary2">About.</h3>
                 <h1 class="font-extrabold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">
