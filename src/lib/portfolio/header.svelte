@@ -12,7 +12,7 @@
     <nav class="container px-8 py-8 md:px-14 lg:px-24 mx-auto md:flex md:justify-between md:items-center">
     <div class="flex items-center justify-between">
         <a href="/" class="text-lg font-bold text-white md:text-2xl">ZED.CODES</a>
-        
+
         <!-- Mobile menu button -->
         <div on:click={toggleNavbar} class="flex md:hidden">
             <button class="text-white cursor-pointer mr-4 border-none focus:outline-none" class:open on:click={() => open = !open}>
@@ -28,7 +28,7 @@
     <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
     <div
         class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 
-        {showMenu ? 'flex-col text-center space-x-9' : 'hidden'}">
+        {showMenu ? 'flex-col text-center space-x-6' : 'hidden'}">
         <a class="text-white hover:text-selected-text" href="#home">HOME</a>
         <a class="text-white hover:text-selected-text" href="#about">ABOUT</a>
         <a class="text-white hover:text-selected-text" href="/blog">BLOG</a>
