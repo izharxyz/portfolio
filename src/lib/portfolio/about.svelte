@@ -10,7 +10,7 @@ import Typewriter from "svelte-typewriter";
             
         <div class="flex flex-nowrap lg:ml-20 justify-start max-w-2xl mt-0 md:my-36">
             <div>
-                <h3 class="text-xl md:text-2xl lg:text-3xl text-center md:text-left mx-1 text-primary2">About.</h3>
+                <h3 class="text-lg md:text-2xl lg:text-3xl text-center md:text-left mx-1 text-primary2">About.</h3>
                 <h1 class="font-extrabold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">
                     <Typewriter mode=loop interval=150 unwriteInterval=150 --cursor-color=#ff9f3f --cursor-width=10px>
                         <span>Student</span>
@@ -19,7 +19,7 @@ import Typewriter from "svelte-typewriter";
                         <span>Enthusiast</span>
                     </Typewriter>
                 </h1>
-                <p class="text-xl lg:text-2xl md:text-left mx-1 text-secondary-text mt-4">
+                <p class="text-lg lg:text-2xl md:text-left mx-1 text-secondary-text mt-4">
                     I'm a student based in India, currently pursuing bachelor's in 
                     Computer Science at Ajeenkya DY Patil University, concentrating 
                     on Mobile, UX Design, Web Development and Security. My skills 

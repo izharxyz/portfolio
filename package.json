@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-node": "^1.0.0-next.96",
 		"svelte-inview": "^3.0.1",
 		"svelte-typewriter": "^3.0.4"
 	}
