@@ -27,12 +27,13 @@
 
     <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
     <div
-        class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 
-        {showMenu ? 'flex-col text-center space-x-6' : 'hidden'}">
+        class="flex-col mt-8 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 
+        {showMenu ? 'grid grid-cols-5 items-center' : 'hidden'}">
         <a class="text-white hover:text-selected-text" href="#home">HOME</a>
         <a class="text-white hover:text-selected-text" href="#about">ABOUT</a>
+        <a class="text-white hover:text-selected-text" href="#work">WORK</a>
         <a class="text-white hover:text-selected-text" href="/blog">BLOG</a>
-        <a class="text-white" href="#contact"><button class="px-6 py-2 bg-primary rounded-md font-bold transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300">CONTACT</button></a>
+        <a class="text-white" href="#contact"><button class="px-2 md:px-4 lg:px-6 py-2 bg-primary rounded-md font-bold transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-300">CONTACT</button></a>
         
     </div>
     </nav>
