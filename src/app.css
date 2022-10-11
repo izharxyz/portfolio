@@ -14,3 +14,34 @@
 html {
   @apply bg-bg scroll-smooth;
 }
+
+@layer utilities {
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fadeInDown {
+    animation: fadeInDown 0.5s ease-in-out;
+    
+  }
+  @keyframes fadeOutUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-40%);
+    }
+  }
+  .fadeOutUp {
+    animation: fadeOutUp 0.5s ease-in-out;
+    
+  }
+}

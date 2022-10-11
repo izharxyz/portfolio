@@ -1,4 +1,4 @@
-<div class="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full" id="home">
+<div class="container mt-40 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full" id="home">
     <div class="flex flex-wrap md:flex-nowrap">
         <div class="flex flex-nowrap justify-center md:justify-start max-w-2xl mt-0 md:my-36">
             <div>
