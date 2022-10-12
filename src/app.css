@@ -16,10 +16,23 @@ html {
 }
 
 @layer utilities {
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fadeInUp {
+    animation: fadeInUp 1s ease-in-out; 
+  }
   @keyframes fadeInDown {
     0% {
       opacity: 0;
-      transform: translateY(-40%);
+      transform: translateY(-20%);
     }
     100% {
       opacity: 1;
@@ -27,21 +40,32 @@ html {
     }
   }
   .fadeInDown {
-    animation: fadeInDown 0.5s ease-in-out;
-    
+    animation: fadeInDown 1s ease-in-out;  
   }
-  @keyframes fadeOutUp {
+
+  @keyframes fadeIn {
     0% {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 0; 
     }
     100% {
-      opacity: 0;
-      transform: translateY(-40%);
+      opacity: 1;
     }
   }
-  .fadeOutUp {
-    animation: fadeOutUp 0.5s ease-in-out;
-    
+  .fadeIn {
+    animation: fadeIn 2s ease-in-out;  
+  }
+  
+  @keyframes scaleInUp {
+    0% {
+      opacity: 0.1;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .scaleInUp {
+    animation: scaleInUp 1s ease-in-out;
   }
 }
