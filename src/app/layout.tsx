@@ -51,7 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${clashDisplay.className} font-clash`}>{children}</body>
+      <body className={`${clashDisplay.className} font-clash overflow-x-hidden`}>{children}</body>
     </html>
   )
 }

@@ -9,7 +9,7 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                clash: ["var(--font-clash-display)"],
+                sans: ["var(--font-clash-display)"],
             },
         },
     },
