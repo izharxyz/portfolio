@@ -1,7 +1,7 @@
 export default function Home() {
 return (
 <main className="flex min-h-screen items-center justify-center p-20">
-  <div className='flex flex-col min-h-screen w-full items-center justify-center bg-violet-200 border-2 border-black'>
+  <div className='flex flex-col min-h-screen w-full items-center justify-center bg-violet-200 border-2 border-black overflow-hidden'>
     {/* navbar */}
     <div className='w-full border-b-2 border-black flex'>
       <div className='w-full h-28 mx-20 border-x-2 border-black  flex items-center justify-between p-10'>
@@ -21,7 +21,7 @@ return (
       </div>
     </div>
 
-
+    {/* Herp section */}
     <div className='w-full p-20'>
       <div className='grid grid-cols-2 w-full border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)]'>
         <div className='text-left w-full bg-rose-300 p-10 overflow-visible z-10'>
@@ -34,7 +34,7 @@ return (
                 </span>
             </h1>
             <a href="#" className='bg-teal-400 px-10 py-2 text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)]'>
-                CONTACT ME
+                MORE ABOUT ME
             </a>
         </div>
         <div className='w-full bg-rose-300 relative'>
@@ -59,16 +59,21 @@ return (
 
     <div className='w-full px-20 mt-20'>
       <div className='border-2 border-black w-full p-10 text-2xl bg-teal-400 shadow-[10px_10px_0px_rgba(0,0,0,1)] relative'>
-            I am an aspiring student based in India, currently immersed in the world of Computer Science at Ajeenkya DY Patil University. My academic journey revolves around the realms of Mobile Development, UX Design, Web Development, and Security, each a brushstroke on the canvas of my education. <br /> <br />
+      I am a passionate student based in India, currently pursuing a Bachelor's degree in Computer Science at Ajeenkya DY Patil University. My academic focus includes Mobile Development, UX Design, Web Development, and Security. <br /> <br />
 
-            Beyond the classroom, I am a storyteller of the digital world. I craft narratives, sharing the wisdom I've gathered on my voyage through the landscape of Software Development. My written reflections aim to illuminate the path for fellow wanderers in the vast Dev Community. You can discover my written expressions <a href="https://poeticcode.xyz" className='text-underline text-blue-700'>here</a>. <br /> <br />
+In addition to my studies, I have a strong inclination towards sharing knowledge and experiences gained throughout my journey in Software Development. I create valuable content to help fellow members of the Dev Community on various topics. You can explore my blogs <a href="#" className="text-blue-600 underline">here</a>. <br /> <br />
 
-            I extend an invitation to connect with me and traverse this artistic journey together on LinkedIn. It's a stage where I often reveal my musings and partake in profound dialogues. <br /><br />
+I welcome connections and followers on my LinkedIn profile, where I regularly share insights and engage in discussions. <br /> <br />
 
-            In this grand gallery of life, I am now seeking opportunities, both near and far, where I can continue to weave my threads of creativity. If you hold a key to a realm where my skills and experiences may flourish, I encourage you to reach out. I am eager to paint new stories, sketch fresh ideas, and leave my mark on the canvas of innovation.   
+I am actively seeking internships and remote job opportunities where I can contribute, learn, and grow. If you have a promising opportunity that aligns with my skills and experiences, please don't hesitate to reach out. I am eager to collaborate and make a positive impact. 
+
             <div className="absolute -top-36 -right-20 text-rose-400">
             <svg className="h-48 w-48" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><path fill="currentColor" d="M208 144a15.78 15.78 0 0 1-10.42 14.94l-51.65 19l-19 51.61a15.92 15.92 0 0 1-29.88 0L78 178l-51.62-19a15.92 15.92 0 0 1 0-29.88l51.65-19l19-51.61a15.92 15.92 0 0 1 29.88 0l19 51.65l51.61 19A15.78 15.78 0 0 1 208 144Zm-56-96h16v16a8 8 0 0 0 16 0V48h16a8 8 0 0 0 0-16h-16V16a8 8 0 0 0-16 0v16h-16a8 8 0 0 0 0 16Zm88 32h-8v-8a8 8 0 0 0-16 0v8h-8a8 8 0 0 0 0 16h8v8a8 8 0 0 0 16 0v-8h8a8 8 0 0 0 0-16Z"/></svg>
-            </div>    
+            </div> 
+
+            <div>
+              {/* add social links here  */}
+            </div>   
       </div>
     </div>
 
@@ -80,10 +85,106 @@ return (
       </div>
     </div>
 
-    <div className='w-full px-20 mt-20'>
-      <div className='border-2 border-black w-full p-10 text-2xl bg-orange-300 shadow-[10px_10px_0px_rgba(0,0,0,1)] h-96 mb-20'>
-
+    <div className='w-full px-20 mt-20 relative z-10'>
+      <div className=" absolute -top-32 right-96 text-black -z-10">
+        <svg className="h-48 w-48" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M8 20v-4H4v-2h4v-4H4V8h4V4h2v4h4V4h2v4h4v2h-4v4h4v2h-4v4h-2v-4h-4v4H8Zm2-6h4v-4h-4v4Z"/></svg>
       </div>
+      <div className='border-2 border-black w-full text-2xl bg-orange-300 shadow-[10px_10px_0px_rgba(0,0,0,1)] mb-20 grid grid-cols-1 xl:grid-cols-2 h-fit'>
+
+        {/* left side of skills section */}
+          <div className="w-full h-full flex flex-col gap-10 items-center justify-center p-10">
+             <h2 className="text-3xl font-semibold">Programming languages</h2>
+             <div className="w-full h-full flex items-center justify-center gap-10">
+              <div className="w-1/4 text-right flex flex-col gap-4 font-normal">
+                  <div className="relative z-10 uppercase">
+                    Rust
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-24 bg-rose-300 rounded-full"></div>
+                  </div>
+                  <div className="relative z-10 uppercase">
+                    Python
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-28 bg-rose-300 rounded-full"></div>
+                  </div>
+                  <div className="relative z-10 uppercase">
+                    Javascript
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-44 bg-rose-300 rounded-full"></div>
+                  </div>
+                  <div className="relative z-10 uppercase">
+                    Kotlin
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-28 bg-rose-300 rounded-full"></div>
+                  </div>
+                  <div className="relative z-10 uppercase">
+                    Bash
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-28 bg-rose-300 rounded-full"></div>
+                  </div>
+              </div>
+              <div className="w-3/4 flex flex-col gap-5">
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-3/5 h-full bg-indigo-300 rounded-l-full"></div>
+                  </div>
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-4/5 h-full bg-indigo-300 rounded-l-full"></div>
+                  </div>
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-4/6 h-full bg-indigo-300 rounded-l-full"></div>
+                  </div>
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-2/5 h-full bg-indigo-300 rounded-l-full"></div>
+                  </div>
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-4/6 h-full bg-indigo-300 rounded-l-full"></div>
+                  </div>
+              </div>
+             </div>
+          </div>
+
+          {/* right side of skills section */}
+          <div className="w-full h-full flex flex-col gap-10 items-center justify-center p-10 bg-indigo-300">
+             <h2 className="text-3xl font-semibold">Technologies</h2>
+             <div className="w-full h-full flex items-center justify-center gap-10">
+              <div className="w-1/4 text-right flex flex-col gap-4 font-normal">
+                  <div className="relative z-10 uppercase">
+                    Svelte
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-32 bg-rose-300 rounded-full"></div>
+                  </div>
+                  <div className="relative z-10 uppercase">
+                    Django
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-32 bg-rose-300 rounded-full"></div>
+                  </div>
+                  <div className="relative z-10 uppercase">
+                    TailwindCSS
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-44 bg-rose-300 rounded-full"></div>
+                  </div>
+                  <div className="relative z-10 uppercase">
+                    Nextjs
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-28 bg-rose-300 rounded-full"></div>
+                  </div>
+                  <div className="relative z-10 uppercase">
+                    Flutter
+                    <div className="absolute bottom-1 -right-2 -z-10 h-8 w-36 bg-rose-300 rounded-full"></div>
+                  </div>
+              </div>
+              <div className="w-3/4 flex flex-col gap-5">
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-3/5 h-full bg-orange-300 rounded-l-full"></div>
+                  </div>
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-4/5 h-full bg-orange-300 rounded-l-full"></div>
+                  </div>
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-5/6 h-full bg-orange-300 rounded-l-full"></div>
+                  </div>
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-2/5 h-full bg-orange-300 rounded-l-full"></div>
+                  </div>
+                  <div className="h-7 w-full bg-transparent rounded-full border-2 border-black">
+                      <div className="w-2/6 h-full bg-orange-300 rounded-l-full"></div>
+                  </div>
+              </div>
+             </div>
+          
+              </div>
+          </div>
+      
     </div>
   </div>
 </main>
