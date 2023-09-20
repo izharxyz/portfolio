@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    .font-stroke {
+        -webkit-text-stroke: 2px black;
+        color: transparent;
+    }
+}
+
 @layer components {
     body {
-        @apply bg-emerald-100;
+        @apply bg-violet-500;
     }
 }
