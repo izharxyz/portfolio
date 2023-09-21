@@ -5,11 +5,15 @@ export default function Home() {
                 {/* navbar */}
                 <div className="w-full border-b-2 border-black flex">
                     <div className="w-full h-28 mx-5 md:mx-10 lg:mx-20 border-x-2 border-black  flex items-center justify-between p-5 md:p-10">
-                        <a href="#" className="text-xl md:text-2xl">
+                        <div className="lg:hidden">{/* mobile nav */}</div>
+                        <a
+                            href="#"
+                            className="text-xl md:text-2xl hidden lg:flex gap-2"
+                        >
                             MY WORK
                         </a>
 
-                        <div className="flex flex-row items-center font-bold text-xl md:text-2xl gap-1">
+                        <div className="hidden lg:flex flex-row items-center font-bold text-xl md:text-2xl gap-1">
                             <h1>Mohamed</h1>
                             <div className="rounded-3xl w-12 h-6 bg-violet-500"></div>
                             <h1>Izhar</h1>
@@ -18,9 +22,11 @@ export default function Home() {
                         <div className="flex items-center justify-center">
                             <a
                                 href="#"
-                                className="bg-rose-400 px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)]"
+                                className="bg-rose-400 px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] flex w-fit overflow-visible"
                             >
-                                LET'S TALK
+                                <p className="flex-nowrap text-ellipsis min-w-max">
+                                    LET'S TALK
+                                </p>
                             </a>
                         </div>
                     </div>
@@ -42,9 +48,11 @@ export default function Home() {
                             </h1>
                             <a
                                 href="#"
-                                className="bg-teal-400 px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)]"
+                                className="bg-teal-400 px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] flex w-fit overflow-visible"
                             >
-                                MORE ABOUT ME
+                                <p className="flex-nowrap text-ellipsis min-w-max">
+                                    CONTACT ME
+                                </p>
                             </a>
                         </div>
                         <div className="w-full bg-rose-300 relative">
@@ -153,30 +161,36 @@ export default function Home() {
                     <div className="border-2 border-black w-full text-xl md:text-2xl bg-orange-300 shadow-[10px_10px_0px_rgba(0,0,0,1)] grid grid-cols-1 xl:grid-cols-2 h-fit">
                         {/* left side of skills section */}
                         <div className="w-full h-full flex flex-col gap-5 md:gap-10 items-center justify-center p-5 md:p-10">
-                            <h2 className="text-3xl font-semibold">
-                                Programming languages
+                            <h2 className="text-2xl sm:text-3xl font-semibold flex gap-2">
+                                <span className="hidden md:block">
+                                    Programming
+                                </span>
+                                Languages
                             </h2>
                             <div className="w-full h-full flex items-center justify-center gap-10">
-                                <div className="w-1/4 text-right flex flex-col gap-3 md:gap-4 font-normal md:font-medium">
-                                    <div className="relative z-10 uppercase">
+                                <div className="w-1/4 text-left md:text-right flex flex-col gap-3 md:gap-4 font-normal md:font-medium uppercase">
+                                    <div className="relative z-10">
                                         Rust
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-20 bg-rose-300"></div>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-20 bg-rose-300"></div>
                                     </div>
-                                    <div className="relative z-10 uppercase">
+                                    <div className="relative z-10">
                                         Python
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-24 bg-rose-300"></div>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-24 bg-rose-300"></div>
                                     </div>
-                                    <div className="relative z-10 uppercase">
-                                        Javascript
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-32 bg-rose-300"></div>
+                                    <div className="relative z-10">
+                                        <span className="md:hidden">JS</span>
+                                        <span className="hidden md:block">
+                                            JAVASCRIPT
+                                        </span>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-32 bg-rose-300"></div>
                                     </div>
-                                    <div className="relative z-10 uppercase">
+                                    <div className="relative z-10">
                                         Kotlin
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-20 bg-rose-300"></div>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-20 bg-rose-300"></div>
                                     </div>
-                                    <div className="relative z-10 uppercase">
+                                    <div className="relative z-10">
                                         Bash
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-24 bg-rose-300"></div>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-24 bg-rose-300"></div>
                                     </div>
                                 </div>
                                 <div className="w-3/4 flex flex-col gap-5">
@@ -201,30 +215,35 @@ export default function Home() {
 
                         {/* right side of skills section */}
                         <div className="w-full h-full flex flex-col gap-5 md:gap-10 items-center justify-center p-5 md:p-10 bg-indigo-300">
-                            <h2 className="text-3xl font-semibold">
+                            <h2 className="text-2xl sm:text-3xl font-semibold">
                                 Technologies
                             </h2>
                             <div className="w-full h-full flex items-center justify-center gap-10">
-                                <div className="w-1/4 text-right flex flex-col gap-3 md:gap-4 font-normal md:font-medium">
-                                    <div className="relative z-10 uppercase">
+                                <div className="w-1/4 text-left md:text-right flex flex-col gap-3 md:gap-4 font-normal md:font-medium uppercase">
+                                    <div className="relative z-10">
                                         Svelte
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-24 bg-rose-300"></div>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-24 bg-rose-300"></div>
                                     </div>
-                                    <div className="relative z-10 uppercase">
+                                    <div className="relative z-10">
                                         Django
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-24 bg-rose-300"></div>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-24 bg-rose-300"></div>
                                     </div>
-                                    <div className="relative z-10 uppercase">
-                                        TailwindCSS
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-32 bg-rose-300"></div>
+                                    <div className="relative z-10">
+                                        <span className="md:hidden">
+                                            Tailwind
+                                        </span>
+                                        <span className="hidden md:block">
+                                            TailwindCSS
+                                        </span>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-32 bg-rose-300"></div>
                                     </div>
-                                    <div className="relative z-10 uppercase">
+                                    <div className="relative z-10">
                                         Nextjs
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-20 bg-rose-300"></div>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-20 bg-rose-300"></div>
                                     </div>
-                                    <div className="relative z-10 uppercase">
+                                    <div className="relative z-10">
                                         Flutter
-                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 w-28 bg-rose-300"></div>
+                                        <div className="absolute -bottom-1 -right-2 -z-10 h-5 md:h-6 md:w-28 bg-rose-300"></div>
                                     </div>
                                 </div>
                                 <div className="w-3/4 flex flex-col gap-5">
