@@ -8,7 +8,7 @@ export default function Home() {
     const filename = "resume-izhar.pdf";
 
     return (
-        <main className="flex min-h-screen items-center justify-center p-5 md:p-10 lg:p-20">
+        <main className="flex min-h-screen items-center justify-center sm:p-5 md:p-10 lg:p-20">
             <div className="flex flex-col min-h-screen w-full items-center justify-center bg-violet-200 border-2 border-black overflow-hidden">
                 {/* navbar */}
                 <div className="w-full border-b-2 border-black flex">
@@ -258,7 +258,6 @@ export default function Home() {
                     <div className="font-bold text-4xl sm:text-7xl md:text-8xl w-fit relative z-20">
                         My
                         <span className="font-stroke-sm sm:font-stroke">
-                            {" "}
                             Skills
                         </span>
                         <div className="absolute -right-10 -bottom-2 md:-bottom-5 bg-orange-300 h-8 sm:h-14 md:h-20 w-48 sm:w-72 md:w-96 -z-10"></div>
