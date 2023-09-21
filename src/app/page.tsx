@@ -2,6 +2,7 @@
 import useDownloader from "react-use-downloader";
 
 import Contact from "./components/Contact";
+import Footer from "./components/Foother";
 
 export default function Home() {
     const { download } = useDownloader();
@@ -739,6 +740,8 @@ export default function Home() {
 
                 {/* Contact section */}
                 <Contact />
+                {/* End of contact section */}
+                <Footer />
             </div>
         </main>
     );
