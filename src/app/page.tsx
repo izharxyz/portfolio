@@ -1,4 +1,12 @@
+"use client";
+import useDownloader from "react-use-downloader";
+
 export default function Home() {
+    const { download } = useDownloader();
+
+    const fileUrl = "/media/resume-izhar.pdf";
+    const filename = "resume-izhar.pdf";
+
     return (
         <main className="flex min-h-screen items-center justify-center p-5 md:p-10 lg:p-20">
             <div className="flex flex-col min-h-screen w-full items-center justify-center bg-violet-200 border-2 border-black overflow-hidden">
@@ -126,7 +134,10 @@ export default function Home() {
                             </svg>
                         </div>
                         <div className="w-full flex items-center justify-center mt-5 md:mt-10">
-                            <button className="bg-rose-400 p-5 sm:px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] relative">
+                            <button
+                                onClick={() => download(fileUrl, filename)}
+                                className="bg-rose-400 p-5 sm:px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] relative"
+                            >
                                 DOWNLOAD MY RESUME
                                 <div className="absolute -top-10 -right-16">
                                     <svg
