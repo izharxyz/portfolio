@@ -1,6 +1,7 @@
 "use client";
 import useDownloader from "react-use-downloader";
-import Image from "next/image";
+
+import Contact from "./components/Contact";
 
 export default function Home() {
     const { download } = useDownloader();
@@ -16,7 +17,7 @@ export default function Home() {
                     <div className="w-full h-28 mx-5 md:mx-10 lg:mx-20 border-x-2 border-black  flex items-center justify-between p-5 md:p-10">
                         <div className="lg:hidden">{/* mobile nav */}</div>
                         <a
-                            href="#"
+                            href="#projects"
                             className="text-xl md:text-2xl hidden lg:flex gap-2"
                         >
                             MY WORK
@@ -402,7 +403,10 @@ export default function Home() {
                 {/* End of Skills section */}
 
                 {/* Start of Projects section */}
-                <div className="w-full px-5 md:px-10 lg:px-20 mt-5 md:mt-10 lg:mt-20">
+                <div
+                    id="projects"
+                    className="w-full px-5 md:px-10 lg:px-20 mt-5 md:mt-10 lg:mt-20"
+                >
                     <div className="font-bold text-4xl sm:text-7xl md:text-8xl w-fit relative z-20">
                         My
                         <span className="font-stroke-sm sm:font-stroke">
@@ -679,7 +683,7 @@ export default function Home() {
                 </div>
                 {/* End of second project */}
 
-                {/* buil something section  */}
+                {/* build something section  */}
                 <div className="bg-rose-300 text-violet-200 w-full mt-5 md:mt-10 lg:mt-20 h-[32rem] overflow-hidden relative">
                     <div className="absolute -left-40 top-24 text-teal-400">
                         <svg
@@ -731,6 +735,10 @@ export default function Home() {
                         </a>
                     </div>
                 </div>
+                {/* End of build something section  */}
+
+                {/* Contact section */}
+                <Contact />
             </div>
         </main>
     );
