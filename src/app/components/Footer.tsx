@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="w-full">
             <div className="bg-gray-950 text-rose-100 w-full p-5 md:p-10 lg:p-20 mt-5 md:mt-10 lg:mt-20">
                 <div className="w-full flex items-center justify-between">
-                    <div className="w-full flex flex-col gap-5">
+                    <div id="hire-me-on" className="w-fit flex flex-col gap-5">
                         <p className="text-xl md:text-2xl font-semibold">
                             Hire me on
                         </p>
@@ -19,7 +19,7 @@ export default function Footer() {
                             Freelancer
                         </a>
                     </div>
-                    <div className="w-full flex flex-col gap-5">
+                    <div className="w-fit flex flex-col gap-5">
                         <p className="text-xl md:text-2xl font-semibold">
                             Socials
                         </p>

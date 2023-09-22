@@ -23,7 +23,7 @@ export default function BuildSomething() {
                         </span>
                     </h1>
                     <a
-                        href="#"
+                        href="#hire-me-on"
                         className="bg-rose-400 p-5 sm:px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] flex w-fit overflow-visible"
                     >
                         <p className="flex-nowrap text-ellipsis min-w-max">

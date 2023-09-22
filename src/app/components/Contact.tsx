@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Contact() {
     return (
-        <div className="w-full">
+        <div id="contact-me" className="w-full">
             <div className="w-full px-5 md:px-10 lg:px-20 mt-5 md:mt-10 lg:mt-20">
                 <div className="font-bold text-4xl sm:text-7xl md:text-8xl w-fit relative z-20">
                     <span className="font-stroke-sm sm:font-stroke">
