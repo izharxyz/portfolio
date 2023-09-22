@@ -1,13 +1,15 @@
 "use client";
 
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import BuildSomething from "./components/BuildSomething";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import {
+    Header,
+    Hero,
+    About,
+    Skills,
+    Projects,
+    BuildSomething,
+    Contact,
+    Footer,
+} from "@/app/components";
 
 export default function Home() {
     return (
