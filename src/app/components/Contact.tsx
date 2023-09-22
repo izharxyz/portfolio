@@ -42,7 +42,7 @@ export default function Contact() {
                                     type="text"
                                     name="name"
                                     id="name"
-                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 focus:outline-none w-full"
+                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full"
                                 />
                             </div>
                             <div className="w-full">
@@ -51,7 +51,7 @@ export default function Contact() {
                                     type="email"
                                     name="email"
                                     id="email"
-                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 focus:outline-none w-full"
+                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full"
                                 />
                             </div>
                             <div className="w-full">
@@ -60,7 +60,7 @@ export default function Contact() {
                                     name="message"
                                     id="message"
                                     rows={4}
-                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 focus:outline-none w-full"
+                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full"
                                 />
                             </div>
                             <button
