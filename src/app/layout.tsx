@@ -10,16 +10,6 @@ const clashDisplay = localFont({
             style: "normal",
         },
         {
-            path: "./fonts/ClashDisplay-Light.otf",
-            weight: "300",
-            style: "normal",
-        },
-        {
-            path: "./fonts/ClashDisplay-Extralight.otf",
-            weight: "200",
-            style: "normal",
-        },
-        {
             path: "./fonts/ClashDisplay-Medium.otf",
             weight: "500",
             style: "normal",
@@ -35,6 +25,7 @@ const clashDisplay = localFont({
             style: "normal",
         },
     ],
+    display: "swap",
     variable: "--font-clash-display",
 });
 
