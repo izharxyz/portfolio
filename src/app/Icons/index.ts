@@ -6,5 +6,6 @@ export { default as HeartIcon } from "./HeartIcon";
 export { default as LeetcodeIcon } from "./LeetcodeIcon";
 export { default as LinkedinIcon } from "./LinkedinIcon";
 export { default as SparkMultiColorIcon } from "./SparkMultiColorIcon";
+export { default as SparksIcon } from "./SparksIcon";
 export { default as StarsIcon } from "./StarsIcon";
 export { default as TwitterIcon } from "./TwitterIcon";
