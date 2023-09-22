@@ -28,7 +28,7 @@ export default function About() {
                     various topics. You can explore my blogs
                     <a
                         href="https://poeticcode.xyz"
-                        className="text-blue-600 underline"
+                        className="text-blue-800 ml-2"
                     >
                         here
                     </a>
