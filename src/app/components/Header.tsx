@@ -1,9 +1,13 @@
+import { Logo } from "@/app/Icons";
 export default function Header() {
     return (
         <div className="w-full">
             <div className="w-full border-b-2 border-black flex">
                 <div className="w-full h-28 mx-5 md:mx-10 lg:mx-20 border-x-2 border-black  flex items-center justify-between p-5 md:p-10">
-                    <div className="lg:hidden">{/* mobile nav */}</div>
+                    <div className="lg:hidden">
+                        {/* mobile nav */}
+                        <Logo className="h-10 w-10 text-violet-500" />
+                    </div>
                     <a
                         href="#projects"
                         className="text-xl md:text-2xl hidden lg:flex gap-2"
@@ -13,7 +17,7 @@ export default function Header() {
 
                     <div className="hidden lg:flex flex-row items-center font-bold text-xl md:text-2xl gap-1">
                         <h1>Mohamed</h1>
-                        <div className="rounded-3xl w-12 h-6 bg-violet-500"></div>
+                        <Logo className="h-10 w-10 text-violet-500" />
                         <h1>Izhar</h1>
                     </div>
 
