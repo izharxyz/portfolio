@@ -12,10 +12,20 @@ export default function Footer() {
                         <a href="#" className="text-xl">
                             Upwork
                         </a>
-                        <a href="#" className="text-xl">
+                        <a
+                            href="https://www.fiverr.com/zzedddd?public_mode=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xl"
+                        >
                             Fiverr
                         </a>
-                        <a href="#" className="text-xl">
+                        <a
+                            href="https://www.freelancer.com/u/zzedddd?sb=t"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xl"
+                        >
                             Freelancer
                         </a>
                     </div>
@@ -23,13 +33,28 @@ export default function Footer() {
                         <p className="text-xl md:text-2xl font-semibold">
                             Socials
                         </p>
-                        <a href="#" className="text-xl">
+                        <a
+                            href="https://www.linkedin.com/in/mohamed-izhar-670128227"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xl"
+                        >
                             Linkedin
                         </a>
-                        <a href="#" className="text-xl">
+                        <a
+                            href="https://github.com/zzedddd"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xl"
+                        >
                             Github
                         </a>
-                        <a href="#" className="text-xl">
+                        <a
+                            href="https://leetcode.com/zzedddd/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xl"
+                        >
                             Twitter
                         </a>
                     </div>
