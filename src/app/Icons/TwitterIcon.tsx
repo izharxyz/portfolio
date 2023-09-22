@@ -1,4 +1,4 @@
-const TwitterIcon = ({ className }: { className?: string }) => {
+export default function TwitterIcon({ className }: { className?: string }) {
     return (
         <svg
             className={className}
@@ -13,6 +13,4 @@ const TwitterIcon = ({ className }: { className?: string }) => {
             />
         </svg>
     );
-};
-
-export default TwitterIcon;
+}

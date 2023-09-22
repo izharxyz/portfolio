@@ -1,4 +1,8 @@
-const SparkMultiColorIcon = ({ className }: { className?: string }) => {
+export default function SparkMultiColorIcon({
+    className,
+}: {
+    className?: string;
+}) {
     return (
         <svg
             className={className}
@@ -21,6 +25,4 @@ const SparkMultiColorIcon = ({ className }: { className?: string }) => {
             />
         </svg>
     );
-};
-
-export default SparkMultiColorIcon;
+}

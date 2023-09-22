@@ -1,4 +1,4 @@
-const LinkedinIcon = ({ className }: { className?: string }) => {
+export default function LinkedinIcon({ className }: { className?: string }) {
     return (
         <svg
             className={className}
@@ -13,6 +13,4 @@ const LinkedinIcon = ({ className }: { className?: string }) => {
             />
         </svg>
     );
-};
-
-export default LinkedinIcon;
+}

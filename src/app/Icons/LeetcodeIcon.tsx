@@ -1,4 +1,4 @@
-const LeetcodeIcon = ({ className }: { className?: string }) => {
+export default function LeetcodeIcon({ className }: { className?: string }) {
     return (
         <svg
             className={className}
@@ -13,6 +13,4 @@ const LeetcodeIcon = ({ className }: { className?: string }) => {
             />
         </svg>
     );
-};
-
-export default LeetcodeIcon;
+}

@@ -1,4 +1,4 @@
-const AsteriskIcon = ({ className }: { className?: string }) => {
+export default function AsteriskIcon({ className }: { className?: string }) {
     return (
         <svg
             className={className}
@@ -13,6 +13,4 @@ const AsteriskIcon = ({ className }: { className?: string }) => {
             />
         </svg>
     );
-};
-
-export default AsteriskIcon;
+}

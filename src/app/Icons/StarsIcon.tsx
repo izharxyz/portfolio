@@ -1,4 +1,4 @@
-const StarsIcon = ({ className }: { className?: string }) => {
+export default function StarsIcon({ className }: { className?: string }) {
     return (
         <svg
             className={className}
@@ -13,6 +13,4 @@ const StarsIcon = ({ className }: { className?: string }) => {
             />
         </svg>
     );
-};
-
-export default StarsIcon;
+}
