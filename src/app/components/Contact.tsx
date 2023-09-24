@@ -14,7 +14,7 @@ export default function Contact() {
             </div>
 
             <div className="w-full px-5 md:px-10 lg:px-20 mt-5 md:mt-10 lg:mt-20 relative z-10">
-                <div className="w-full p-5 md:p-10 text-xl md:text-2xl grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+                <div className="w-full text-xl md:text-2xl grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
                     <div className="w-full flex flex-col items-center justify-start">
                         <p className="text-xl md:text-2xl">
                             I believe in the power of meaningful connections.
@@ -23,6 +23,7 @@ export default function Contact() {
                             to listen and engage. Your thoughts and inquiries
                             are important to me.
                         </p>
+
                         <Image
                             src={"/images/cactus.svg"}
                             alt="cactus"
