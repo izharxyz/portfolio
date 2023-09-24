@@ -28,8 +28,8 @@ export default function Contact() {
                             src={"/images/cactus.svg"}
                             alt="cactus"
                             className="object-cover"
-                            width={500}
-                            height={500}
+                            width={550}
+                            height={550}
                         />
                     </div>
                     <div className="w-full flex items-start justify-center">
@@ -43,7 +43,8 @@ export default function Contact() {
                                     type="text"
                                     name="name"
                                     id="name"
-                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full"
+                                    required
+                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full text-base"
                                 />
                             </div>
                             <div className="w-full">
@@ -52,16 +53,28 @@ export default function Contact() {
                                     type="email"
                                     name="email"
                                     id="email"
-                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full"
+                                    required
+                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full text-base"
                                 />
                             </div>
                             <div className="w-full">
-                                <label htmlFor="message">Message</label>
+                                <label htmlFor="name">Subject*</label>
+                                <input
+                                    type="text"
+                                    name="subject"
+                                    id="subject"
+                                    required
+                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full text-base"
+                                />
+                            </div>
+                            <div className="w-full">
+                                <label htmlFor="message">Message*</label>
                                 <textarea
                                     name="message"
                                     id="message"
+                                    required
                                     rows={4}
-                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full"
+                                    className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full text-base"
                                 />
                             </div>
                             <button
