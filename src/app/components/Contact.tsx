@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { sendEmail } from "@/app/sendEmail";
 
 export default function Contact() {
     return (
@@ -34,7 +35,9 @@ export default function Contact() {
                     </div>
                     <div className="w-full flex items-start justify-center">
                         <form
-                            action=""
+                            action={async (formData) => {
+                                await sendEmail(formData);
+                            }}
                             className="w-full flex flex-col gap-5 md:gap-10"
                         >
                             <div className="w-full">
