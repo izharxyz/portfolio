@@ -1,7 +1,45 @@
 import Image from "next/image";
-import { sendEmail } from "@/app/sendEmail";
+import { useState } from "react";
 
 export default function Contact() {
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+    });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleChange = (event: any) => {
+        setData({
+            ...data,
+            [event.target.name]: event.target.value,
+        });
+    };
+
+    const sendEmail = async (event: any) => {
+        event.preventDefault();
+        setIsSubmitting(true); // Set isSubmitting to true when form is submitted
+        const respose = await fetch("/api/send", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+        setIsSubmitting(false); // Set isSubmitting to false after form is submitted
+        if (respose.status === 200) {
+            // toast.success("Message sent successfully");
+            setData({
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+            });
+        }
+    };
+
     return (
         <div id="contact-me" className="w-full">
             <div className="w-full px-5 md:px-10 lg:px-20 mt-5 md:mt-10 lg:mt-20">
@@ -35,9 +73,8 @@ export default function Contact() {
                     </div>
                     <div className="w-full flex items-start justify-center">
                         <form
-                            action={async (formData) => {
-                                await sendEmail(formData);
-                            }}
+                            method="post"
+                            onSubmit={sendEmail}
                             className="w-full flex flex-col gap-5 md:gap-10"
                         >
                             <div className="w-full">
@@ -47,6 +84,8 @@ export default function Contact() {
                                     name="name"
                                     id="name"
                                     required
+                                    onChange={handleChange}
+                                    value={data.name}
                                     className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full text-base"
                                 />
                             </div>
@@ -57,6 +96,8 @@ export default function Contact() {
                                     name="email"
                                     id="email"
                                     required
+                                    onChange={handleChange}
+                                    value={data.email}
                                     className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full text-base"
                                 />
                             </div>
@@ -67,6 +108,8 @@ export default function Contact() {
                                     name="subject"
                                     id="subject"
                                     required
+                                    onChange={handleChange}
+                                    value={data.subject}
                                     className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full text-base"
                                 />
                             </div>
@@ -77,14 +120,19 @@ export default function Contact() {
                                     id="message"
                                     required
                                     rows={4}
+                                    onChange={handleChange}
+                                    value={data.message}
                                     className="full border-black border-2 p-2.5 bg-violet-300 focus:bg-violet-400 duration-300 focus:outline-none w-full text-base"
                                 />
                             </div>
                             <button
+                                disabled={isSubmitting}
                                 type="submit"
                                 className="bg-rose-400 p-5 sm:px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)]"
                             >
-                                Send Message
+                                {isSubmitting
+                                    ? "Sending message..."
+                                    : "Send message"}
                             </button>
                         </form>
                     </div>
