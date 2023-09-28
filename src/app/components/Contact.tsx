@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
 
+import { LoadingIcon } from "@/app/Icons";
+
 export default function Contact() {
     const [data, setData] = useState({
         name: "",
@@ -128,11 +130,16 @@ export default function Contact() {
                             <button
                                 disabled={isSubmitting}
                                 type="submit"
-                                className="bg-rose-400 p-5 sm:px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)]"
+                                className="bg-rose-400 p-5 sm:px-10 py-2 text-xl md:text-2xl border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] flex items-center justify-center"
                             >
-                                {isSubmitting
-                                    ? "Sending message..."
-                                    : "Send message"}
+                                {isSubmitting ? (
+                                    <div className="flex gap-2">
+                                        <LoadingIcon className="h-8 w-8 animate-spin" />
+                                        Sending message...
+                                    </div>
+                                ) : (
+                                    "Send Message"
+                                )}
                             </button>
                         </form>
                     </div>
