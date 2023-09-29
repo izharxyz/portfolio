@@ -1,11 +1,13 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+
+import { EmailForwardToMe, EmailReplyToSender } from "@/app/emails";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
     try {
-        const { name, email, message } = await request.json();
+        const { name, email, subject, message } = await request.json();
         if (!name || !email || !message) {
             return NextResponse.json({ error: "missing fields" });
         }
@@ -15,7 +17,7 @@ export async function POST(request: Request) {
             to: "melegend.forever@protonmail.com",
             subject: `new message from ${name}`,
             reply_to: email as string,
-            text: message as string,
+            react: EmailForwardToMe({ name, email, subject, message }),
         });
 
         // forwards email to sender
@@ -24,7 +26,7 @@ export async function POST(request: Request) {
             to: email as string,
             subject: "Thank you for contacting me!",
             reply_to: "melegend.forever@protonmail.com",
-            text: "I will get back to you as soon as possible.",
+            react: EmailReplyToSender({ name }),
         });
 
         return NextResponse.json(data);
