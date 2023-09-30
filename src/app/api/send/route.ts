@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
         const data = await resend.emails.send({
             from: "Izhar <mohamed@izhar.xyz>",
             to: "melegend.forever@protonmail.com",
-            subject: `new message from ${name}`,
+            subject: `new message from ${name} through portfolio`,
             reply_to: email as string,
             react: EmailForwardToMe({ name, email, subject, message }),
         });
