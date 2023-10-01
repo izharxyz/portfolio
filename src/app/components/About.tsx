@@ -74,6 +74,7 @@ export default function About() {
                                 href="https://www.linkedin.com/in/mohamed-izhar-670128227"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="linkedin"
                                 className="text-black p-2 md:p-5 bg-blue-300 border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] md:hover:scale-110 duration-300"
                             >
                                 <LinkedinIcon className="w-6 h-6 md:w-10 md:h-10" />
@@ -83,15 +84,17 @@ export default function About() {
                                 href="https://github.com/zzedddd"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="github"
                                 className="text-black p-2 md:p-5 bg-gray-200 border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] md:hover:scale-110 duration-300"
                             >
                                 <GithubIcon className="w-6 h-6 md:w-10 md:h-10" />
                             </a>
                             {/* Twitter */}
                             <a
-                                href=""
+                                href="https://x.com/The_0neTrueG0D"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="twitter"
                                 className="text-black p-2 md:p-5 bg-blue-400 border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] md:hover:scale-110 duration-300"
                             >
                                 <TwitterIcon className="w-6 h-6 md:w-10 md:h-10" />
@@ -101,6 +104,7 @@ export default function About() {
                                 href="https://leetcode.com/zzedddd/"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="leetcode"
                                 className="text-black p-2 md:p-5 bg-orange-300 border-2 border-black shadow-[10px_10px_0px_rgba(0,0,0,1)] md:hover:scale-110 duration-300"
                             >
                                 <LeetcodeIcon className="w-6 h-6 md:w-10 md:h-10" />

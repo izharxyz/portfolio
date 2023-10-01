@@ -3,7 +3,7 @@ import { Logo, HeartIcon, GithubIcon } from "@/app/Icons";
 export default function Footer() {
     return (
         <div className="w-full">
-            <div className="bg-gray-950 text-rose-100 w-full p-5 md:p-10 lg:p-20 mt-5 md:mt-10 lg:mt-20">
+            <div className="bg-gray-950 text-violet-200 w-full p-5 md:p-10 lg:p-20 mt-5 md:mt-10 lg:mt-20">
                 <div className="w-full flex items-center justify-between">
                     <div id="hire-me-on" className="w-fit flex flex-col gap-5">
                         <p className="text-xl md:text-2xl font-semibold">
@@ -16,6 +16,7 @@ export default function Footer() {
                             href="https://www.fiverr.com/zzedddd?public_mode=true"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="fiverr"
                             className="text-xl"
                         >
                             Fiverr
@@ -24,6 +25,7 @@ export default function Footer() {
                             href="https://www.freelancer.com/u/zzedddd?sb=t"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="freelancer"
                             className="text-xl"
                         >
                             Freelancer
@@ -37,6 +39,7 @@ export default function Footer() {
                             href="https://www.linkedin.com/in/mohamed-izhar-670128227"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="linkedin"
                             className="text-xl"
                         >
                             Linkedin
@@ -45,14 +48,16 @@ export default function Footer() {
                             href="https://github.com/zzedddd"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="github"
                             className="text-xl"
                         >
                             Github
                         </a>
                         <a
-                            href="https://leetcode.com/zzedddd/"
+                            href="https://x.com/The_0neTrueG0D"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="twitter"
                             className="text-xl"
                         >
                             Twitter
