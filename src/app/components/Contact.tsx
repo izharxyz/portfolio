@@ -104,7 +104,7 @@ export default function Contact() {
                                 />
                             </div>
                             <div className="w-full">
-                                <label htmlFor="name">Subject*</label>
+                                <label htmlFor="subject">Subject*</label>
                                 <input
                                     type="text"
                                     name="subject"
