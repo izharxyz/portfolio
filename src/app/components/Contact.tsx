@@ -135,10 +135,10 @@ export default function Contact() {
                                 {isSubmitting ? (
                                     <div className="flex gap-2">
                                         <LoadingIcon className="h-8 w-8 animate-spin" />
-                                        Sending message...
+                                        SENDING MESSAGE...
                                     </div>
                                 ) : (
-                                    "Send Message"
+                                    "SEND MESSAGE"
                                 )}
                             </button>
                         </form>
