@@ -34,12 +34,12 @@ export default function About() {
                     towards sharing knowledge and experiences gained throughout
                     my journey in Software Development. I create valuable
                     content to help fellow members of the Dev Community on
-                    various topics. You can explore my blogs
+                    various topics. You can explore my blogs on
                     <a
                         href="https://poeticcode.xyz"
                         className="text-black ml-2 underline font-semibold"
                     >
-                        here
+                        poeticcode.xyz
                     </a>
                     . <br /> <br />I welcome connections and followers on my
                     LinkedIn profile, where I regularly share insights and
