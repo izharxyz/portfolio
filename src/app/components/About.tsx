@@ -34,7 +34,7 @@ export default function About() {
                     towards sharing knowledge and experiences gained throughout
                     my journey in Software Development. I create valuable
                     content to help fellow members of the Dev Community on
-                    various topics. You can explore my blogs on
+                    various topics. You can explore my blogs on my blog site
                     <a
                         href="https://poeticcode.xyz"
                         className="text-black ml-2 underline font-semibold"
