@@ -21,6 +21,7 @@ export default function Projects() {
                         <img
                             src="images/project1.svg"
                             alt="project1"
+                            loading="lazy"
                             className="w-full h-96 object-cover bg-violet-100"
                         />
                     </div>
@@ -175,6 +176,7 @@ export default function Projects() {
                         <img
                             src="images/project2.svg"
                             alt="project2"
+                            loading="lazy"
                             className="w-full h-96 object-cover bg-violet-100"
                         />
                     </div>
