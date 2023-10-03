@@ -6,7 +6,7 @@ export default function robots() {
                 allow: "/",
             },
         ],
-        sitemap: "https://zzed.me/sitemap.xml",
-        host: "https://zzed.me",
+        sitemap: "https://izhar.xyz/sitemap.xml",
+        host: "https://izhar.xyz",
     };
 }
