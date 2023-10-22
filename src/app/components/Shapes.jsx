@@ -120,7 +120,6 @@ function Geometry({r, position, geometry, materials}) {
                     z: 0,
                     duration: 1,
                     ease: "elastic.out(1, 0.3)",
-                    delay: 0.3,
             });
         });
         return () => ctx.revert();

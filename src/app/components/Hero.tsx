@@ -43,7 +43,7 @@ export default function Hero() {
                 ".title-animation",
                 {
                     y: 20,
-                    scale: 0.8,
+                    scale: 0.5,
                     opacity: 0,
                 },
                 {
@@ -62,7 +62,7 @@ export default function Hero() {
         return text.split("").map((letter, index) => (
             <span
                 key={index}
-                className={`inline-block opacity-100 name-animation name-animation-${key}`}
+                className={`inline-block opacity-0 name-animation name-animation-${key}`}
             >
                 {letter}
             </span>
@@ -72,7 +72,7 @@ export default function Hero() {
     return (
         <section
             ref={comp_ref}
-            className="px-4 py-10 md:px-6 md:py-14 lg:py-16 h-screen"
+            className="px-4 py-10 md:px-6 md:py-14 lg:py-16 h-screen bg-gradient-to-tr from-slate-900 to-red-950 from-60%"
         >
             <div className="mx-auto max-w-7xl h-full w-full grid grid-cols-1 lg:grid-cols-2 items-center">
                 <div className="col-span-1" aria-label="Mohamed Izhar">
