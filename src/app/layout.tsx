@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 
+import { Header } from "@/app/components";
+
 const urabnist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -15,8 +17,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="bg-slate-900 text-slate-100">
-            <body className={urabnist.className}>{children}</body>
+        <html
+            lang="en"
+            className="bg-gradient-to-tr from-slate-900 to-red-950 from-60% text-slate-100"
+        >
+            <body className={urabnist.className}>
+                <Header />
+                {children}
+            </body>
         </html>
     );
 }
