@@ -1,8 +1,11 @@
+"use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
+import Shapes from "./Shapes";
+
 export default function Hero() {
-    const comp = useRef(null);
+    const comp_ref = useRef(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -10,7 +13,11 @@ export default function Hero() {
             tl.fromTo(
                 ".hello-animation",
                 { opacity: 0 },
-                { opacity: 1, duration: 1, delay: 0.5 }
+                {
+                    opacity: 1,
+                    duration: 1,
+                    delay: 0.1,
+                }
             );
             tl.fromTo(
                 ".name-animation",
@@ -47,7 +54,7 @@ export default function Hero() {
                     delay: 0.1,
                 }
             );
-        }, comp);
+        }, comp_ref);
         return () => ctx.revert();
     }, []);
 
@@ -63,10 +70,13 @@ export default function Hero() {
     };
 
     return (
-        <section ref={comp}>
-            <div className="min-h-screen w-full grid grid-cols-1 lg:grid-cols-2 items-center">
+        <section
+            ref={comp_ref}
+            className="px-4 py-10 md:px-6 md:py-14 lg:py-16 h-screen"
+        >
+            <div className="mx-auto max-w-7xl h-full w-full grid grid-cols-1 lg:grid-cols-2 items-center">
                 <div className="col-span-1" aria-label="Mohamed Izhar">
-                    <span className="hello-animation text-2xl md:text-3xl text-slate-600">
+                    <span className="hello-animation text-2xl md:text-3xl text-slate-600 opacity-0">
                         Hello, my name is
                     </span>
                     <h1 className="mb-8 text-[clamp(3rem,20vmin,20rem)] font-extrabold leading-none tracking-tighter">
@@ -81,6 +91,7 @@ export default function Hero() {
                         I create expreiences that inspire
                     </span>
                 </div>
+                <Shapes />
             </div>
         </section>
     );
