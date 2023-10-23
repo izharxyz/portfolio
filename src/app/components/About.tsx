@@ -51,7 +51,7 @@ export default function About() {
         >
             <div className="mx-auto max-w-7xl h-full w-full grid grid-cols-1 lg:grid-cols-2">
                 <div className="col-span-1">
-                    <h2 className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-slate-400">
+                    <h2 className="text-7xl md:text-8xl font-bold tracking-tighter text-slate-400">
                         About me
                     </h2>
                     <h3>
