@@ -1,10 +1,11 @@
 "use client";
-import { Hero } from "@/app/components";
+import { Hero, About } from "@/app/components";
 
 export default function Home() {
     return (
         <>
             <Hero />
+            <About />
         </>
     );
 }
