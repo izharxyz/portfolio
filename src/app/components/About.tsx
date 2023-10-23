@@ -6,7 +6,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(TextPlugin);
 
-export default function () {
+export default function About() {
     const comp_ref = useRef(null);
     const titles = [
         "Rustacean",
