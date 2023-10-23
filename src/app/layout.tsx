@@ -19,11 +19,11 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className="bg-gradient-to-tr from-slate-900 to-red-950 from-60% text-slate-100"
+            className="bg-gradient-to-tr from-slate-900 to-red-950 from-60% text-slate-100 overflow-x-hidden"
         >
             <body className={urabnist.className}>
-                <Header />
                 {children}
+                <div className="h-[500vh]"></div>
             </body>
         </html>
     );
