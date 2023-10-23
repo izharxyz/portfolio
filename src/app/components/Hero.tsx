@@ -72,10 +72,13 @@ export default function Hero() {
     return (
         <section
             ref={comp_ref}
-            className="px-4 py-10 md:px-6 md:py-14 lg:py-16 h-screen bg-gradient-to-tr from-slate-900 to-red-950 from-60%"
+            className="px-4 py-10 md:px-6 md:py-14 lg:py-16 h-screen"
         >
             <div className="mx-auto max-w-7xl h-full w-full grid grid-cols-1 lg:grid-cols-2 items-center">
-                <div className="col-span-1" aria-label="Mohamed Izhar">
+                <div
+                    className="col-span-1 mt-20 md:mt-0"
+                    aria-label="Mohamed Izhar"
+                >
                     <span className="hello-animation text-2xl md:text-3xl text-slate-600 opacity-0">
                         Hello, my name is
                     </span>
