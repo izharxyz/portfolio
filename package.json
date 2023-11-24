@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@gsap/react": "^2.1.0",
         "@react-three/drei": "^9.96.1",
         "@react-three/fiber": "^8.15.14",
         "@types/three": "^0.160.0",
