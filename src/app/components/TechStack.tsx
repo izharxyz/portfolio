@@ -1,8 +1,9 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { MdCircle } from "react-icons/md";
 
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -41,8 +42,8 @@ export default function TechStack() {
 
     const comp_ref = useRef(null);
 
-    useEffect(() => {
-        let ctx = gsap.context(() => {
+    useGSAP(
+        () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: comp_ref.current,
@@ -71,9 +72,10 @@ export default function TechStack() {
                     ease: "power1.inOut",
                 }
             );
-        }, comp_ref);
-        return () => ctx.revert(); // cleanup
-    });
+        },
+
+        { scope: comp_ref }
+    );
 
     return (
         <section ref={comp_ref}>
