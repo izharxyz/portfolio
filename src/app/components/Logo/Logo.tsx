@@ -2,11 +2,8 @@ import React from 'react'
 
 export const Logo = () => {
   return (
-    /* eslint-disable @next/next/no-img-element */
-    <img
-      alt="Payload Logo"
-      className="max-w-[9.375rem] invert dark:invert-0"
-      src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/payload/src/admin/assets/images/payload-logo-light.svg"
-    />
+    <div className="text-3xl font-extrabold tracking-wider bg-gradient-to-br from-cyan-500 to-indigo-500 bg-clip-text text-transparent">
+      {'<izh />'}
+    </div>
   )
 }
