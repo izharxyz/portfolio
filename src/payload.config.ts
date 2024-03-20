@@ -32,6 +32,8 @@ import { revalidateRedirects } from './payload/hooks/revalidateRedirects'
 import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
 import { Page, Post } from 'src/payload-types'
 
+import { Logo } from './payload/components/Logo'
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -47,7 +49,11 @@ const generateURL: GenerateURL<Post | Page> = ({ doc }) => {
 
 export default buildConfig({
   admin: {
-    components: {},
+    components: {
+      graphics: {
+        Logo: Logo,
+      }
+    },
     user: Users.slug,
     livePreview: {
       breakpoints: [
