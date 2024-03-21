@@ -33,6 +33,21 @@ a:hover, a:focus-visible {
     text-decoration: none;
 }
 
+.nav__wrap button {
+    padding: 16px 16px;
+    border-radius: 10px;
+    background-color: var(--nav-btn-bg);
+    color: var(--theme-text);
+    margin-bottom: 10px;
+}
+
+.nav__wrap button:hover {
+    background-color: var(--theme-text);
+    color: var(--theme-bg);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
 
 .custom-logo {
     font-size: 3rem;
