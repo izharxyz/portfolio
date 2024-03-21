@@ -33,6 +33,7 @@ import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
 import { Page, Post } from 'src/payload-types'
 
 import { Logo } from './payload/components/Logo'
+import { NavbarLogo } from './payload/components/Logo/NavbarLogo'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -52,7 +53,8 @@ export default buildConfig({
     components: {
       graphics: {
         Logo: Logo,
-      }
+      }, 
+      beforeNavLinks: [NavbarLogo]
     },
     user: Users.slug,
     livePreview: {
