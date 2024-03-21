@@ -22,6 +22,17 @@
     --theme-elevation-200: var(--color-base-100);
 }
 
+a {
+    text-decoration: none;
+    transition-property: all !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 250ms !important;
+}
+
+a:hover, a:focus-visible {
+    text-decoration: none;
+}
+
 html[data-theme='dark'] {
     --theme-text: #CBACF9;
     --nav-btn-bg: var(--color-base-700);
