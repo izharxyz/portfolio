@@ -33,6 +33,33 @@ a:hover, a:focus-visible {
     text-decoration: none;
 }
 
+
+.custom-logo {
+    font-size: 3rem;
+    line-height: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    background: linear-gradient(to right, #CBACF9 0%, #4f46e5 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+
+.nav nav a {
+    padding: 0;
+}
+
+.nav nav a:hover, .nav nav a:focus-visible {
+    text-decoration: none;
+}
+
 html[data-theme='dark'] {
     --theme-text: #CBACF9;
     --nav-btn-bg: var(--color-base-700);
