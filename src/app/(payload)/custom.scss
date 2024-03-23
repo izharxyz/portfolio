@@ -49,6 +49,24 @@ a:hover, a:focus-visible {
     transition-duration: 250ms;
 }
 
+.nav-group__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .nav__link {
+        padding: 10px 16px;
+        border-radius: 10px;
+        background-color: var(--nav-item-bg);
+        color: var(--theme-elevation-800);
+        text-decoration: none;
+        border: 1px transparent solid;
+    }
+
+    .nav__link:hover {
+        border: 1px solid var(--theme-text);
+    }
+}
+
 .custom-logo {
     font-size: 3rem;
     line-height: 3.2rem;
