@@ -34,6 +34,8 @@ import { Page, Post } from 'src/payload-types'
 
 import { Logo } from './payload/components/Logo'
 import { NavbarLogo } from './payload/components/Logo/NavbarLogo'
+import { DashboardIcon } from './payload/components/DashboardIcon'
+import { Icon } from 'lucide-react'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -53,6 +55,7 @@ export default buildConfig({
     components: {
       graphics: {
         Logo: Logo,
+        Icon: DashboardIcon,
       }, 
       beforeNavLinks: [NavbarLogo]
     },
