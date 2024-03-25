@@ -93,6 +93,17 @@ a:hover, a:focus-visible {
     text-decoration: none;
 }
 
+.avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--theme-text);
+    overflow: visible;
+}
+
 html[data-theme='dark'] {
     --theme-text: #CBACF9;
     --nav-btn-bg: var(--color-base-700);
