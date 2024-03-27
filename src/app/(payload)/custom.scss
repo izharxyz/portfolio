@@ -104,6 +104,17 @@ a:hover, a:focus-visible {
     overflow: visible;
 }
 
+.card {
+    border-radius: 10px;
+    transition-property: all !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 250ms !important;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
 html[data-theme='dark'] {
     --theme-text: #CBACF9;
     --nav-btn-bg: var(--color-base-700);
