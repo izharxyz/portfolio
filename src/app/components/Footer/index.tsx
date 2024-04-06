@@ -4,7 +4,6 @@ import React from 'react'
 
 import type { Footer } from '../../../payload-types'
 
-import { ThemeSelector } from '../../providers/Theme/ThemeSelector'
 import { CMSLink } from '../Link'
 
 import { Logo } from '../Logo/Logo'
@@ -22,7 +21,6 @@ export async function Footer() {
         </Link>
 
         <div className="flex items-center flex-row gap-4 md:items-center">
-          <ThemeSelector />
           <nav className="flex flex-row gap-4">
             {navItems.map(({ link }, i) => {
               return <CMSLink className="text-white" key={i} {...link} />
