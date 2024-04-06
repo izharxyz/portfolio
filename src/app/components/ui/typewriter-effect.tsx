@@ -69,12 +69,7 @@ export const TypewriterEffect = ({
     )
   }
   return (
-    <div
-      className={cn(
-        'text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-center',
-        className,
-      )}
-    >
+    <div className={cn('text-5xl md:text-6xl lg:text-7xl font-bold text-center', className)}>
       {renderWords()}
       <motion.span
         initial={{
@@ -154,7 +149,7 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold"
           style={{
             whiteSpace: 'nowrap',
           }}
