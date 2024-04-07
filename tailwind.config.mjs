@@ -48,6 +48,8 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         spotlight: 'spotlight 2s ease .75s 1 forwards',
         shimmer: 'shimmer 2s linear infinite',
+        'rotate-to-dark': 'rotate-to-dark 0.5s forwards',
+        'rotate-to-light': 'rotate-to-light 0.5s forwards',
       },
       colors: {
         accent: {
@@ -117,6 +119,14 @@ export default {
           to: {
             backgroundPosition: '-200% 0',
           },
+        },
+        'rotate-to-dark': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'rotate-to-light': {
+          '0%': { transform: 'rotate(360deg)' },
+          '100%': { transform: 'rotate(0deg)' },
         },
       },
       typography: ({ theme }) => ({
