@@ -9,6 +9,8 @@ import type { Header } from '../../../payload-types'
 import { Logo } from '../Logo/Logo'
 import { HeaderNav } from './Nav'
 
+import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
+
 interface HeaderClientProps {
   header: Header
 }
@@ -37,7 +39,10 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
       <Link href="/">
         <Logo />
       </Link>
-      <HeaderNav header={header} />
+      <div className="flex gap-8 items-center">
+        <ThemeSelector />
+        <HeaderNav header={header} />
+      </div>
     </header>
   )
 }
