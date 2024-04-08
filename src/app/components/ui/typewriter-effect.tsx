@@ -85,7 +85,7 @@ export const TypewriterEffect = ({
         }}
         // @ts-ignore
         className={cn(
-          'inline-block rounded-sm w-[10px] h-10 md:h-14 lg:h-16 bg-purple-500 -mb-2',
+          'inline-block rounded-sm w-[10px] h-10 md:h-14 lg:h-16 bg-purple-600 -mb-2',
           cursorClassName,
         )}
       ></motion.span>
@@ -172,7 +172,7 @@ export const TypewriterEffectSmooth = ({
         }}
         // @ts-ignore
         className={cn(
-          'block rounded-sm w-[10px] h-10 md:h-14 lg:h-16 bg-purple-500 -mb-2',
+          'block rounded-sm w-[10px] h-10 md:h-14 lg:h-16 bg-purple-600 -mb-2',
           cursorClassName,
         )}
       ></motion.span>
