@@ -54,6 +54,7 @@ const PrimaryButton = ({ children, ...props }: ButtonProps) => {
   return (
     <button
       {...props}
+      // gradient purple-600 purple-400 purple-600
       className="inline-flex h-10 md:h-12 animate-shimmer items-center justify-center rounded-lg bg-[linear-gradient(110deg,#9333ea,35%,#c084fc,55%,#9333ea)] bg-[length:200%_100%] px-8 md:px-10 py-2 text-white font-medium transition-colors"
     >
       {children}
@@ -65,7 +66,7 @@ const SecondaryButton = ({ children, ...props }: ButtonProps) => {
   return (
     <button
       {...props}
-      className="inline-flex h-10 md:h-12 animate-shimmer items-center justify-center rounded-lg border-2 border-background bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-8 md:px-10 py-2 text-secondary-foreground font-medium transition-colors"
+      className="inline-flex h-10 md:h-12 animate-shimmer items-center justify-center rounded-lg bg-[linear-gradient(110deg,#9333ea,35%,#c084fc,55%,#9333ea)] bg-[length:200%_100%] px-8 md:px-10 py-2 text-white font-medium transition-colors"
     >
       {children}
     </button>
@@ -78,7 +79,8 @@ const OutlineButton = ({ children, ...props }: ButtonProps) => {
       {...props}
       className="relative inline-flex h-10 md:h-12 overflow-hidden rounded-lg p-[2px] md:p-[3px]"
     >
-      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#a855f7_50%,#3b82f6_100%)]" />
+      {/* gradient blue-500 purple-600 blue-500 */}
+      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#9333ea_50%,#3b82f6_100%)] text-pur" />
       <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-background px-8 md:px-10 py-2 text-sm font-medium backdrop-blur-3xl">
         {children}
       </span>
