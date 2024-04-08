@@ -1,6 +1,5 @@
 'use client'
-import { useHeaderTheme } from '@/providers/HeaderTheme'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import type { Page } from '../../../payload-types'
 
@@ -9,13 +8,7 @@ import { CMSLink } from '../../components/Link'
 import { SparklesCore } from '@/components/ui/sparkles'
 import { TypewriterEffect } from '@/components/ui/typewriter-effect'
 
-export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText }) => {
-  const { setHeaderTheme } = useHeaderTheme()
-
-  useEffect(() => {
-    setHeaderTheme('dark')
-  })
-
+export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
   const words = [
     {
       text: 'I',
@@ -44,16 +37,16 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText 
   ]
 
   return (
-    <div className="h-screen w-full -mt-[10.4rem] px-4 relative flex flex-col items-center justify-center overflow-hidden">
+    <div className="h-screen w-full -mt-[10.4rem] px-4 relative flex flex-col items-center justify-center overflow-hidden text-pur">
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
           minSize={0.6}
-          maxSize={1.5}
+          maxSize={1.8}
           particleDensity={50}
           className="w-full h-full"
-          particleColor="#FFFFFF"
+          particleColor="#9333ea"
         />
       </div>
       <div className="text-center relative z-20 flex flex-col items-center justify-center">
