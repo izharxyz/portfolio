@@ -47,6 +47,7 @@ export default async function Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `izh | All Posts`,
+    title: `Blogs by Izhar`,
+    description: `Welcome to my blog where I document my thoughts, ideas, and experiences.`,
   }
 }
