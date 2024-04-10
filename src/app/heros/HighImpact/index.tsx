@@ -6,9 +6,11 @@ import type { Page } from '../../../payload-types'
 import { CMSLink } from '../../components/Link'
 
 import { SparklesCore } from '@/components/ui/sparkles'
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { TypewriterEffect } from '@/components/ui/typewriter-effect'
 
 export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
+  const greeting = `Hello, my name is Mohamed Izhar`
   const words = [
     {
       text: 'I',
@@ -20,7 +22,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
     },
     {
       text: 'digital',
-      className: 'text-5xl md:text-6xl lg:text-7xl font-bold z-20',
+      className: 'text-5xl md:text-6xl lg:text-7xl font-bold text-purple-600 z-20',
     },
     {
       text: 'experiences',
@@ -32,7 +34,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
     },
     {
       text: 'inspire',
-      className: 'text-5xl md:text-6xl lg:text-7xl font-bold text-purple-600 z-20',
+      className: 'text-5xl md:text-6xl lg:text-7xl font-bold z-20',
     },
   ]
 
@@ -50,15 +52,17 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
         />
       </div>
       <div className="text-center relative z-20 flex flex-col items-center justify-center">
-        <p className="mb-6 text-lg md:text-xl lg:text-2xl text-muted-foreground">
-          Hello, my name is <span className="text-secondary-foreground">Mohamed Izhar</span>
-        </p>
+        <TextGenerateEffect
+          words={greeting}
+          className="mb-6 text-lg md:text-xl lg:text-2xl text-muted-foreground font-normal"
+        />
+
         <div className="max-w-6xl mb-16">
           <TypewriterEffect words={words} />
         </div>
 
         {Array.isArray(links) && links.length > 0 && (
-          <ul className="flex flex-col md:flex-row gap-4">
+          <ul className="flex flex-col md:flex-row gap-4 relative">
             {links.map(({ link }, i) => {
               return (
                 <li key={i}>
