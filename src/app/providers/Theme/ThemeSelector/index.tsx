@@ -28,7 +28,7 @@ export const ThemeSelector: React.FC = () => {
   return (
     <button
       onClick={() => onThemeChange(theme === 'light' ? 'dark' : 'light')}
-      className="relative flex items-center justify-center w-7 h-7 rounded-full cursor-pointer"
+      className="relative flex items-center justify-center w-5 h-5 rounded-full cursor-pointer"
     >
       <div
         className={`absolute transition-transform duration-500 ${
