@@ -1,5 +1,7 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import { stagger, useAnimate } from 'framer-motion'
 
 import type { Page } from '../../../payload-types'
 
@@ -38,6 +40,26 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
     },
   ]
 
+  const [scope, animate] = useAnimate()
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      animate(
+        'li',
+        {
+          opacity: 1,
+          y: 0,
+        },
+        {
+          duration: 1,
+          delay: stagger(0.5),
+        },
+      )
+    }, 2 * 1000)
+
+    return () => clearTimeout(timeout)
+  }, [scope.current])
+
   return (
     <div className="h-screen w-full -mt-[10.4rem] px-4 relative flex flex-col items-center justify-center overflow-hidden text-pur">
       <div className="w-full absolute inset-0 h-screen">
@@ -62,10 +84,10 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
         </div>
 
         {Array.isArray(links) && links.length > 0 && (
-          <ul className="flex flex-col md:flex-row gap-4 relative">
+          <ul ref={scope} className="flex flex-col md:flex-row gap-4 relative">
             {links.map(({ link }, i) => {
               return (
-                <li key={i}>
+                <li key={i} className="opacity-0">
                   <CMSLink {...link} />
                 </li>
               )
