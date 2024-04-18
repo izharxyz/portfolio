@@ -37,6 +37,9 @@ import { Logo } from './payload/components/Logo'
 import { NavbarLogo } from './payload/components/Logo/NavbarLogo'
 import { DashboardIcon } from './payload/components/DashboardIcon'
 
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
+import nodemailer from 'nodemailer'
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -51,6 +54,19 @@ const generateURL: GenerateURL<Post | Page> = ({ doc }) => {
 }
 
 export default buildConfig({
+  email: nodemailerAdapter({
+    defaultFromAddress: 'mohamed@izhar.xyz',
+    defaultFromName: 'Mohamed Izhar',
+    // Any Nodemailer transport
+    transport: await nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: 587,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    }),
+  }),
   admin: {
     components: {
       graphics: {
