@@ -1,5 +1,18 @@
 import type { Form } from '../../payload-types'
 
+const message = `
+Hi {{name}},
+Thank you for getting in touch through my portfolio website. I appreciate your interest in my services and the opportunity to potentially work together.
+I would love to learn more about your project and how I can assist you. Could you please provide more details about what you're looking for? Specifically, it would be helpful to know:
+1) A brief description of your project or the services you need.
+2) Your timeline or any important deadlines.
+3) Any specific requirements or goals you have in mind.
+Once I have more information, I can give you a better idea of how we can proceed and discuss the next steps. If you prefer, we can also schedule a call to discuss your project in detail.
+Looking forward to hearing from you soon!
+Best regards,
+Mohamed Izhar
+`
+
 export const contactForm: Partial<Form> = {
   confirmationMessage: {
     root: {
@@ -14,7 +27,7 @@ export const contactForm: Partial<Form> = {
               format: 0,
               mode: 'normal',
               style: '',
-              text: 'The contact form has been submitted successfully.',
+              text: 'Thank You for Reaching Out!',
               version: 1,
             },
           ],
@@ -35,7 +48,7 @@ export const contactForm: Partial<Form> = {
   createdAt: '2023-01-12T21:47:41.374Z',
   emails: [
     {
-      emailFrom: '"Payload" \u003Cdemo@payloadcms.com\u003E',
+      emailFrom: '"Izhar" \u003Cmohamed@izhar.xyz\u003E',
       emailTo: '{{email}}',
       message: {
         root: {
@@ -50,7 +63,7 @@ export const contactForm: Partial<Form> = {
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: 'Your contact form submission was successfully received.',
+                  text: message,
                   version: 1,
                 },
               ],
@@ -67,15 +80,15 @@ export const contactForm: Partial<Form> = {
           version: 1,
         },
       },
-      subject: "You've received a new message.",
+      subject: "Thank You for Reaching Out!",
     },
   ],
   fields: [
     {
-      name: 'full-name',
-      blockName: 'full-name',
+      name: 'name',
+      blockName: 'name',
       blockType: 'text',
-      label: 'Full Name',
+      label: 'ame',
       required: true,
       width: 100,
     },
@@ -85,14 +98,6 @@ export const contactForm: Partial<Form> = {
       blockType: 'email',
       label: 'Email',
       required: true,
-      width: 100,
-    },
-    {
-      name: 'phone',
-      blockName: 'phone',
-      blockType: 'number',
-      label: 'Phone',
-      required: false,
       width: 100,
     },
     {

@@ -9,17 +9,17 @@ export const home: RequiredDataFromCollectionSlug<'pages'> = {
       {
         link: {
           type: 'custom',
-          appearance: 'default',
-          label: 'All posts',
-          url: '/posts',
+          appearance: 'outline',
+          label: 'Show my work',
+          url: '/#work',
         },
       },
       {
         link: {
           type: 'custom',
-          appearance: 'outline',
-          label: 'Contact',
-          url: '/contact',
+          appearance: 'default',
+          label: 'Contact me',
+          url: '/#contact',
         },
       },
     ],
