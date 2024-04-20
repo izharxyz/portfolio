@@ -8,6 +8,7 @@ import type { Header } from '../../../payload-types'
 
 import { Logo } from '../Logo/Logo'
 import { HeaderNav } from './Nav'
+import { GradientButton } from '../ui/gradient-button'
 
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 
@@ -33,15 +34,24 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
 
   return (
     <header
-      className="container relative z-20 py-8 flex justify-between"
+      className="z-40 w-screen h-fit fixed top-4 left-0 bg-white dark:bg-black bg-opacity-70 backdrop-blur-lg"
       {...(theme ? { 'data-theme': theme } : {})}
     >
-      <Link href="/">
-        <Logo />
-      </Link>
-      <div className="flex gap-8 items-center">
-        <ThemeSelector />
-        <HeaderNav header={header} />
+      <div className="container py-1 px-1 grid grid-cols-3 border rounded-full">
+        <div className="w-full flex pl-3 items-center justify-start">
+          <HeaderNav header={header} />
+        </div>
+        <div className="w-full flex items-center justify-center">
+          <Link href="/">
+            <Logo />
+          </Link>
+        </div>
+        <div className="w-full flex gap-5 justify-end items-center">
+          <ThemeSelector />
+          <Link href="/#contact">
+            <GradientButton>Let's create something</GradientButton>
+          </Link>
+        </div>
       </div>
     </header>
   )
