@@ -61,7 +61,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
   }, [scope.current])
 
   return (
-    <div className="h-screen w-full -mt-[10.4rem] px-4 relative flex flex-col items-center justify-center overflow-hidden text-pur">
+    <div className="h-screen w-full -mt-16 px-4 relative flex flex-col items-center justify-center overflow-hidden text-pur">
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
           id="tsparticlesfullpage"
