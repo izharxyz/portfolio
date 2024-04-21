@@ -90,7 +90,7 @@ const OutlineButton = ({ children, ...props }: ButtonProps) => {
 
 const GhostButton = ({ children, ...props }: ButtonProps) => {
   return (
-    <button {...props} className="text-md">
+    <button {...props} className="text-sm uppercase">
       {children}
     </button>
   )
