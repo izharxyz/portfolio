@@ -28,7 +28,7 @@ export const ThemeSelector: React.FC = () => {
   return (
     <button
       onClick={() => onThemeChange(theme === 'light' ? 'dark' : 'light')}
-      className="relative flex items-center justify-center w-5 h-5 rounded-full cursor-pointer"
+      className="relative flex items-center justify-center w-4 h-4 rounded-full cursor-pointer"
     >
       <div
         className={`absolute transition-transform duration-500 ${
@@ -36,9 +36,9 @@ export const ThemeSelector: React.FC = () => {
         }`}
       >
         {theme === 'dark' ? (
-          <FaMoon className="text-gray-200" size={20} />
+          <FaMoon className="text-gray-200" size={16} />
         ) : (
-          <FaSun className="text-gray-500" size={20} />
+          <FaSun className="text-gray-500" size={16} />
         )}
       </div>
     </button>
