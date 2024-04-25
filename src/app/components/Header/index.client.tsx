@@ -49,7 +49,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
         <div className="w-full flex gap-5 justify-end items-center">
           <ThemeSelector />
           <Link href="/#contact">
-            <GradientButton>Let{"'"}s create something</GradientButton>
+            <GradientButton>Get in touch</GradientButton>
           </Link>
         </div>
       </div>
