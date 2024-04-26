@@ -11,6 +11,7 @@ import { HeaderNav } from './Nav'
 import { GradientButton } from '../ui/gradient-button'
 
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
+import { RxHamburgerMenu } from 'react-icons/rx'
 
 interface HeaderClientProps {
   header: Header
@@ -33,24 +34,34 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
   }, [headerTheme])
 
   return (
-    <header
-      className="z-40 w-screen h-fit fixed top-4 left-0 bg-white dark:bg-black bg-opacity-70 backdrop-blur-lg"
-      {...(theme ? { 'data-theme': theme } : {})}
-    >
-      <div className="container py-1 px-1 grid grid-cols-3 border rounded-full">
-        <div className="w-full flex pl-3 items-center justify-start">
-          <HeaderNav header={header} />
+    <header className="z-40 w-full h-fit fixed top-4" {...(theme ? { 'data-theme': theme } : {})}>
+      <div className="container px-4 md:px-8">
+        <div className="hidden md:grid grid-cols-3 p-1 border rounded-full bg-white dark:bg-black bg-opacity-70 backdrop-blur-lg">
+          <div className="w-full flex pl-3 items-center justify-start">
+            <HeaderNav header={header} />
+          </div>
+          <div className="w-full flex items-center justify-center">
+            <Link href="/">
+              <Logo />
+            </Link>
+          </div>
+          <div className="w-full flex gap-5 justify-end items-center">
+            <ThemeSelector />
+            <Link href="/#contact">
+              <GradientButton>Get in touch</GradientButton>
+            </Link>
+          </div>
         </div>
-        <div className="w-full flex items-center justify-center">
-          <Link href="/">
+
+        {/* mobile nav */}
+        <div className="md:hidden flex items-center justify-between border rounded-full bg-white dark:bg-black bg-opacity-70 backdrop-blur-lg">
+          <Link href="/" className="pl-2">
             <Logo />
           </Link>
-        </div>
-        <div className="w-full flex gap-5 justify-end items-center">
-          <ThemeSelector />
-          <Link href="/#contact">
-            <GradientButton>Get in touch</GradientButton>
-          </Link>
+          <div className="flex gap-5 pr-4 items-center">
+            <ThemeSelector />
+            <RxHamburgerMenu size={20} />
+          </div>
         </div>
       </div>
     </header>
