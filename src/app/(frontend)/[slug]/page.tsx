@@ -13,6 +13,8 @@ import { Blocks } from '../../components/Blocks'
 import { Hero } from '../../components/Hero'
 import { generateMeta } from '../../utilities/generateMeta'
 
+import { About } from '@/components/About'
+
 export async function generateStaticParams() {
   const payload = await getPayloadHMR({ config: configPromise })
   const pages = await payload.find({
@@ -55,6 +57,7 @@ export default async function Page({ params: { slug = 'home' } }) {
       <PayloadRedirects disableNotFound url={url} />
 
       <Hero {...hero} />
+      <About />
       <Blocks blocks={layout} />
     </main>
   )
