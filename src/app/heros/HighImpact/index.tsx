@@ -73,7 +73,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
           particleColor="#9333ea"
         />
       </div>
-      <div className="text-center relative z-20 flex flex-col items-center justify-center">
+      <div className="text-center relative z-20 flex flex-col items-center justify-center select-none">
         <TextGenerateEffect
           words={greeting}
           className="mb-6 text-lg md:text-xl lg:text-2xl text-muted-foreground font-normal"
