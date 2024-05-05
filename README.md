@@ -37,13 +37,15 @@ git clone https://github.com/0neTrueG0D/portfolio.git
 yarn install
 ```
 
-3. Run the development server
+3. Create a `.env` file in the root directory. You can copy the contents of `.env.example` and replace the values with your own.
+
+4. Run the development server
 
 ```bash
 yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## License
 
