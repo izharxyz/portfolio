@@ -2,6 +2,15 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+import { RiNextjsLine } from 'react-icons/ri'
+import { RiSvelteFill } from 'react-icons/ri'
+import { SiDjango } from 'react-icons/si'
+import { TbBrandReactNative } from 'react-icons/tb'
+import { FaRust } from 'react-icons/fa'
+import { SiTauri } from 'react-icons/si'
+import { SiPostgresql } from 'react-icons/si'
+import { RiTailwindCssFill } from 'react-icons/ri'
+
 export const Skills = () => {
   const variants = {
     initial: {
@@ -23,43 +32,43 @@ export const Skills = () => {
   const skills = [
     {
       name: 'Next.js',
-      icon: 'nextjs',
+      icon: <RiNextjsLine size={32} className="text-black dark:text-white" />,
       level: 90,
     },
 
     {
       name: 'Svelte',
-      icon: 'svelte',
+      icon: <RiSvelteFill size={32} className="text-orange-600" />,
       level: 85,
     },
     {
       name: 'Django',
-      icon: 'django',
+      icon: <SiDjango size={32} className="text-green-600" />,
       level: 95,
     },
     {
       name: 'React Native',
-      icon: 'rNative',
+      icon: <TbBrandReactNative size={32} className="text-sky-500" />,
       level: 80,
     },
     {
       name: 'Rust',
-      icon: 'Rust',
+      icon: <FaRust size={32} className="text-stone-800 dark:text-stone-300" />,
       level: 80,
     },
     {
       name: 'Tauri',
-      icon: 'tauri',
+      icon: <SiTauri size={32} className="text-sky-600 dark:text-amber-300" />,
       level: 75,
     },
     {
       name: 'Postgres',
-      icon: 'postgres',
+      icon: <SiPostgresql size={32} className="text-blue-600" />,
       level: 90,
     },
     {
       name: 'TailwindCSS',
-      icon: 'tailwindcss',
+      icon: <RiTailwindCssFill size={32} className="text-cyan-600" />,
       level: 95,
     },
   ]
@@ -72,8 +81,14 @@ export const Skills = () => {
       className="flex gap-4 w-full h-full min-h-[8rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col"
     >
       {skills.map((skill) => (
-        <div key={skill.name} className="flex items-center gap-4">
-          <div className="text-base font-light w-1/5 text-right">{skill.icon}</div>
+        <div
+          key={skill.name}
+          className="flex items-center justify-center gap-4"
+          aria-label={skill.name}
+        >
+          <div className="text-base font-light w-10 flex items-center justify-center">
+            {skill.icon}
+          </div>
           <div className="grow">
             <motion.div
               variants={variants}
@@ -81,7 +96,7 @@ export const Skills = () => {
                 maxWidth: skill.level + '%',
               }}
               // @ts-ignore
-              className="flex flex-row rounded-full border items-center w-full h-6 lg:h-8"
+              className="flex flex-row rounded-full border items-center w-full h-5 lg:h-6"
             ></motion.div>
           </div>
         </div>
