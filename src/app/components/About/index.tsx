@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import { Skills } from '../Skills'
 
 export const About = () => {
   return (
@@ -33,9 +34,16 @@ export const About = () => {
             <p>Let's create something beautiful</p>
           </div>
         </div>
-        <div className="w-full xl:w-3/5 min-h-[24rem] lg:min-h-[32rem] rounded-xl p-4 border">
-          <h3>Skills</h3>
-          <p>My journey to becoming a developer</p>
+        <div
+          className="w-full xl:w-3/5 min-h-[24rem] lg:min-h-[32rem] rounded-xl p-4 lg:p-10 border flex flex-col justify-between"
+          aria-label="tech stack"
+        >
+          <div className="w-full flex items-center text-center">
+            <h4 className="w-full font-semibold text-lg md:text-xl lg:text-2xl">My Tech Stack</h4>
+          </div>
+          <div className="pt-4 lg:pt-10">
+            <Skills />
+          </div>
         </div>
       </div>
     </section>
