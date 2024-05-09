@@ -2,6 +2,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+import { AnimatedTooltip } from '../ui/animated-tooltip'
+
 import { RiNextjsLine } from 'react-icons/ri'
 import { RiSvelteFill } from 'react-icons/ri'
 import { SiDjango } from 'react-icons/si'
@@ -31,44 +33,52 @@ export const Skills = () => {
   }
   const skills = [
     {
+      id: 1,
       name: 'Next.js',
       icon: <RiNextjsLine size={32} className="text-black dark:text-white" />,
       level: 90,
     },
 
     {
+      id: 2,
       name: 'Svelte',
       icon: <RiSvelteFill size={32} className="text-orange-600" />,
       level: 85,
     },
     {
+      id: 3,
       name: 'Django',
       icon: <SiDjango size={32} className="text-green-600" />,
       level: 95,
     },
     {
+      id: 4,
       name: 'React Native',
       icon: <TbBrandReactNative size={32} className="text-sky-500" />,
       level: 80,
     },
     {
+      id: 5,
       name: 'Rust',
       icon: <FaRust size={32} className="text-stone-800 dark:text-stone-300" />,
       level: 80,
     },
     {
+      id: 6,
       name: 'Tauri',
       icon: <SiTauri size={32} className="text-sky-600 dark:text-amber-300" />,
       level: 75,
     },
     {
+      id: 7,
       name: 'Postgres',
-      icon: <SiPostgresql size={32} className="text-blue-600" />,
+      icon: <SiPostgresql size={32} className="text-sky-700" />,
       level: 90,
     },
     {
+      id: 8,
       name: 'TailwindCSS',
-      icon: <RiTailwindCssFill size={32} className="text-cyan-600" />,
+      icon: <RiTailwindCssFill size={32} className="text-cyan-400" />,
       level: 95,
     },
   ]
@@ -87,7 +97,7 @@ export const Skills = () => {
           aria-label={skill.name}
         >
           <div className="text-base font-light w-10 flex items-center justify-center">
-            {skill.icon}
+            <AnimatedTooltip item={skill} />
           </div>
           <div className="grow">
             <motion.div
