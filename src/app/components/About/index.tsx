@@ -13,7 +13,7 @@ export const About = () => {
         <div className="w-full xl:w-2/5 flex flex-col lg:flex-row xl:flex-col gap-4">
           <div className="w-full min-h-[12rem] lg:min-h-[16rem] rounded-xl p-4 border">
             <h3>Githb Globe</h3>
-            <p>I'm very flexible with time zone communication</p>
+            <p>I&apos;m very flexible with time zone communication</p>
           </div>
           <div className="w-full min-h-[12rem] lg:min-h-[16rem] rounded-xl p-4 border">
             <h3>Socials</h3>
@@ -31,7 +31,7 @@ export const About = () => {
 
           <div className="w-full min-h-[12rem] lg:min-h-[16rem] rounded-xl p-4 border">
             <h3>Copy my email</h3>
-            <p>Let's create something beautiful</p>
+            <p>Let&apos;s create something beautiful</p>
           </div>
         </div>
         <div
