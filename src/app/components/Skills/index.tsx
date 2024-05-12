@@ -36,7 +36,9 @@ export const Skills = () => {
       id: 1,
       name: 'Next.js',
       icon: <RiNextjsLine size={32} className="text-black dark:text-white" />,
-      level: 90,
+      level: 95,
+      levelClassName:
+        'flex flex-row rounded-full bg-gradient-to-r from-black dark:from-white to-purple-600 dark:to-purple-600 p-px items-center w-full h-4 md:h5',
     },
 
     {
@@ -44,42 +46,56 @@ export const Skills = () => {
       name: 'Svelte',
       icon: <RiSvelteFill size={32} className="text-orange-600" />,
       level: 85,
+      levelClassName:
+        'flex flex-row rounded-full bg-gradient-to-r from-orange-600 to-purple-600 p-px items-center w-full h-4 md:h5',
     },
     {
       id: 3,
       name: 'Django',
       icon: <SiDjango size={32} className="text-green-600" />,
-      level: 95,
+      level: 100,
+      levelClassName:
+        'flex flex-row rounded-full bg-gradient-to-r from-green-600 to-purple-600 p-px items-center w-full h-4 md:h5',
     },
     {
       id: 4,
       name: 'React Native',
       icon: <TbBrandReactNative size={32} className="text-sky-500" />,
       level: 80,
+      levelClassName:
+        'flex flex-row rounded-full bg-gradient-to-r from-sky-500 to-purple-600 p-px items-center w-full h-4 md:h5',
     },
     {
       id: 5,
       name: 'Rust',
       icon: <FaRust size={32} className="text-stone-800 dark:text-stone-300" />,
       level: 80,
+      levelClassName:
+        'flex flex-row rounded-full bg-gradient-to-r from-stone-800 dark:from-stone-300 to-purple-600 dark:to-purple-600 p-px items-center w-full h-4 md:h5',
     },
     {
       id: 6,
       name: 'Tauri',
       icon: <SiTauri size={32} className="text-sky-600 dark:text-amber-300" />,
       level: 75,
+      levelClassName:
+        'flex flex-row rounded-full bg-gradient-to-r from-sky-600 dark:from-amber-300 to-purple-600 dark:to-purple-600 p-px items-center w-full h-4 md:h5',
     },
     {
       id: 7,
       name: 'Postgres',
       icon: <SiPostgresql size={32} className="text-sky-700" />,
       level: 90,
+      levelClassName:
+        'flex flex-row rounded-full bg-gradient-to-r from-sky-700 to-purple-600 p-px items-center w-full h-4 md:h5',
     },
     {
       id: 8,
       name: 'TailwindCSS',
       icon: <RiTailwindCssFill size={32} className="text-cyan-400" />,
-      level: 95,
+      level: 100,
+      levelClassName:
+        'flex flex-row rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 p-px items-center w-full h-4 md:h5',
     },
   ]
   return (
@@ -96,7 +112,7 @@ export const Skills = () => {
           className="flex items-center justify-center gap-4"
           aria-label={skill.name}
         >
-          <div className="text-base font-light w-10 flex items-center justify-center">
+          <div className="text-base font-light w-8 flex items-center justify-center">
             <AnimatedTooltip item={skill} />
           </div>
           <div className="grow">
@@ -106,8 +122,10 @@ export const Skills = () => {
                 maxWidth: skill.level + '%',
               }}
               // @ts-ignore
-              className="flex flex-row rounded-full border items-center w-full h-5 lg:h-6"
-            ></motion.div>
+              className={skill.levelClassName}
+            >
+              <div className="w-full h-full rounded-full bg-background"></div>
+            </motion.div>
           </div>
         </div>
       ))}
