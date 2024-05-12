@@ -61,7 +61,7 @@ export const AnimatedTooltip = ({
       </AnimatePresence>
       <div
         onMouseMove={handleMouseMove}
-        className="!m-0 !p-0 rounded-full group-hover:scale-125 group-hover:z-30 relative transition duration-250"
+        className="!m-0 !p-0 rounded-full group-hover:scale-125 group-hover:z-30 relative transition duration-300"
       >
         {item.icon}
       </div>
