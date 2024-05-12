@@ -51,7 +51,7 @@ export const AnimatedTooltip = ({
               whiteSpace: 'nowrap',
             }}
             // @ts-ignore
-            className="absolute -top-12 -left-1/2 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-background z-50 shadow-xl px-4 py-2"
+            className="absolute -top-12 -left-1/2 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-background z-50 shadow-xl dark:shadow-gray-900 px-4 py-2"
           >
             <div className="absolute left-1/3 z-30 w-[40%] -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px " />
             <div className="absolute right-1/3 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-purple-600 to-transparent h-px " />
