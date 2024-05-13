@@ -99,7 +99,7 @@ export const TextRevealEffect = ({
           }}
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
           // @ts-ignore
-          className="min-h-[12rem] w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
+          className="min-h-[12rem] w-[8px] bg-gradient-to-b from-transparent via-neutral-500 to-transparent dark:from-transparent dark:via-neutral-800 dark:to-transparent absolute z-50 will-change-transform"
         ></motion.div>
 
         <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
