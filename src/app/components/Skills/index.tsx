@@ -36,7 +36,7 @@ export const Skills = () => {
       id: 1,
       name: 'Next.js',
       icon: <RiNextjsLine size={32} className="text-black dark:text-white" />,
-      level: 95,
+      level: 100,
       levelClassName:
         'flex flex-row rounded-full bg-gradient-to-r from-black dark:from-white to-purple-600 dark:to-purple-600 p-px items-center w-full h-4 md:h5',
     },
@@ -109,7 +109,7 @@ export const Skills = () => {
       {skills.map((skill) => (
         <div
           key={skill.name}
-          className="flex items-center justify-center gap-4"
+          className="flex items-center justify-center gap-5 lg:gap-8"
           aria-label={skill.name}
         >
           <div className="text-base font-light w-8 flex items-center justify-center">
