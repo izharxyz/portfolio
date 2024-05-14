@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import { AnimatedTooltip } from '../ui/animated-tooltip'
+import { AnimatedTooltip } from '../../ui/animated-tooltip'
 
 import { RiNextjsLine } from 'react-icons/ri'
 import { RiSvelteFill } from 'react-icons/ri'
