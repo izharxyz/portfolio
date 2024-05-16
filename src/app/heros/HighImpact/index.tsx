@@ -7,9 +7,9 @@ import type { Page } from '../../../payload-types'
 
 import { CMSLink } from '../../components/Link'
 
-import { SparklesCore } from '@/components/ui/sparkles'
-import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
-import { TypewriterEffect } from '@/components/ui/typewriter-effect'
+import { SparklesCore } from '@/components/ui/Sparkles'
+import { TextGenerateEffect } from '@/components/ui/TextGenerateEffect'
+import { TypewriterEffect } from '@/components/ui/TypewriterEffect'
 
 export const HighImpactHero: React.FC<Page['hero']> = ({ links }) => {
   const greeting = `Hello, my name is Mohamed Izhar`

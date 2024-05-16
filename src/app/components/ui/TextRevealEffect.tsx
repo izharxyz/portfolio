@@ -87,7 +87,7 @@ export const TextRevealEffect = ({
           // @ts-ignore
           className="absolute bg-background z-20  will-change-transform"
         >
-          <p className="font-bold text-3xl lg:text-4xl tracking-tight p-4 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-neutral-800 dark:from-foreground dark:to-neutral-300">
+          <p className="font-bold text-3xl lg:text-4xl tracking-tight p-4 md:p-8 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-neutral-800 dark:from-foreground dark:to-neutral-300">
             {revealText}
           </p>
         </motion.div>
@@ -103,7 +103,7 @@ export const TextRevealEffect = ({
         ></motion.div>
 
         <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className="font-bold text-3xl lg:text-4xl tracking-tight p-4 bg-clip-text text-transparent bg-[#323238]">
+          <p className="font-bold text-3xl lg:text-4xl tracking-tight p-4 md:p-8 bg-clip-text text-transparent bg-[#323238]">
             {text}
           </p>
           <MemoizedStars />

@@ -8,7 +8,7 @@ import type { Header } from '../../../payload-types'
 
 import { Logo } from '../Logo/Logo'
 import { HeaderNav } from './Nav'
-import { GradientButton } from '../ui/gradient-button'
+import { GradientButton } from '../ui/GradientButton'
 
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { RxHamburgerMenu } from 'react-icons/rx'
