@@ -8,6 +8,8 @@ import type { Post } from '../../../payload-types'
 
 import { Media } from '../Media'
 
+import { CardBody, CardContainer, CardItem } from '@/components/ui/ThreeDCard'
+
 export const Card: React.FC<{
   alignItems?: 'center'
   className?: string
@@ -28,55 +30,65 @@ export const Card: React.FC<{
   const href = `/${relationTo}/${slug}`
 
   return (
-    <article
-      className={cn(
-        'border border-border rounded-lg overflow-hidden bg-card hover:cursor-pointer',
-        className,
-      )}
-      ref={card.ref}
-    >
-      <div className="relative w-full ">
-        {!metaImage && <div className="">No image</div>}
-        {metaImage && typeof metaImage !== 'string' && <Media resource={metaImage} size="360px" />}
-      </div>
-      <div className="p-4">
-        {showCategories && hasCategories && (
-          <div className="uppercase text-sm mb-4">
-            {showCategories && hasCategories && (
-              <div>
-                {categories?.map((category, index) => {
-                  if (typeof category === 'object') {
-                    const { title: titleFromCategory } = category
+    <CardContainer className="inter-var">
+      <CardBody className="min-h-[29rem] h-full w-full border border-border rounded-xl overflow-hidden bg-card relative group/card hover:cursor-pointer dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2]">
+        <CardItem translateZ="100" rotateX={10} rotateZ={-5} className="w-full p-4">
+          {!metaImage && <div className="">No image</div>}
+          {metaImage && typeof metaImage !== 'string' && (
+            <Media
+              resource={metaImage}
+              className="h-full w-full object-cover rounded-xl overflow-hidden"
+            />
+          )}
+        </CardItem>
 
-                    const categoryTitle = titleFromCategory || 'Untitled category'
+        <div className="p-4">
+          {showCategories && hasCategories && (
+            <div className="uppercase text-sm mb-4">
+              {showCategories && hasCategories && (
+                <div>
+                  {categories?.map((category, index) => {
+                    if (typeof category === 'object') {
+                      const { title: titleFromCategory } = category
 
-                    const isLast = index === categories.length - 1
+                      const categoryTitle = titleFromCategory || 'Untitled category'
 
-                    return (
-                      <Fragment key={index}>
-                        {categoryTitle}
-                        {!isLast && <Fragment>, &nbsp;</Fragment>}
-                      </Fragment>
-                    )
-                  }
+                      const isLast = index === categories.length - 1
 
-                  return null
-                })}
-              </div>
-            )}
-          </div>
-        )}
-        {titleToUse && (
-          <div className="prose">
-            <h3>
-              <Link className="not-prose" href={href} ref={link.ref}>
-                {titleToUse}
-              </Link>
-            </h3>
-          </div>
-        )}
-        {description && <div className="mt-2">{description && <p>{sanitizedDescription}</p>}</div>}
-      </div>
-    </article>
+                      return (
+                        <Fragment key={index}>
+                          {categoryTitle}
+                          {!isLast && <Fragment>, &nbsp;</Fragment>}
+                        </Fragment>
+                      )
+                    }
+
+                    return null
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+          {titleToUse && (
+            <CardItem as="div" translateZ="50" className="prose">
+              <h3>
+                <Link
+                  className="not-prose hover:text-purple-600 duration-300"
+                  href={href}
+                  ref={link.ref}
+                >
+                  {titleToUse}
+                </Link>
+              </h3>
+            </CardItem>
+          )}
+          {description && (
+            <CardItem as="p" translateZ="60" className="mt-2">
+              {sanitizedDescription}
+            </CardItem>
+          )}
+        </div>
+      </CardBody>
+    </CardContainer>
   )
 }
