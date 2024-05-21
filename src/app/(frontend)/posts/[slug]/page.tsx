@@ -12,7 +12,6 @@ import type { Post } from '../../../../payload-types'
 
 import { PostHero } from '../../../heros/PostHero'
 import { generateMeta } from '../../../utilities/generateMeta'
-import PageClient from './page.client'
 
 export async function generateStaticParams() {
   const payload = await getPayloadHMR({ config: configPromise })
@@ -34,8 +33,6 @@ export default async function Post({ params: { slug = '' } }) {
 
   return (
     <article className="pt-16 pb-16">
-      <PageClient />
-
       {/* Allows redirects for valid pages too */}
       <PayloadRedirects disableNotFound url={url} />
 
