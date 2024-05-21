@@ -13,15 +13,19 @@ export const CollectionArchive: React.FC<Props> = (props) => {
   const { posts } = props
 
   return (
-    <div className={cn('container')}>
+    <div className={cn('container overflow-hidden py-4 lg:py-8')}>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8">
           {posts?.map((result, index) => {
             if (typeof result === 'object' && result !== null) {
               return (
-                <div className="" key={index}>
-                  <Card className="h-full" doc={result} relationTo="posts" showCategories />
-                </div>
+                <Card
+                  key={index}
+                  className="h-full"
+                  doc={result}
+                  relationTo="posts"
+                  showCategories
+                />
               )
             }
 
