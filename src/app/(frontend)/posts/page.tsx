@@ -21,9 +21,10 @@ export default async function Page() {
 
   return (
     <div className="pt-24 pb-24">
-      <div className="container mb-16">
-        <div className="prose dark:prose-invert max-w-none">
-          <h1>All Posts</h1>
+      <div className="container mb-10">
+        <div className="prose dark:prose-invert max-w-none text-center">
+          <h2>Blog</h2>
+          <p>Welcome to my blog where I document my thoughts, ideas, and experiences</p>
         </div>
       </div>
 
