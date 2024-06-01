@@ -58,12 +58,20 @@ export default function Footer() {
                 <HorizontalLine />
                 <div className="flex items-center justify-center gap-5 text-muted-foreground">
                     <Link
-                        href="#"
+                        href="https://github.com/izharxyz"
                         className="hover:text-primary hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <FaGithub className="h-6 w-6 md:h-7 md:w-7" />
+                    </Link>
+                    <Link
+                        href="https://www.linkedin.com/in/izharmohamed"
+                        className="hover:text-primary hover:scale-110 duration-300"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaLinkedin className="h-6 w-6 md:h-7 md:w-7" />
                     </Link>
                     <Link
                         href="#"
@@ -72,14 +80,6 @@ export default function Footer() {
                         rel="noopener noreferrer"
                     >
                         <FaXTwitter className="h-6 w-6 md:h-7 md:w-7" />
-                    </Link>
-                    <Link
-                        href="#"
-                        className="hover:text-primary hover:scale-110 duration-300"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaLinkedin className="h-6 w-6 md:h-7 md:w-7" />
                     </Link>
                 </div>
                 <p className="text-muted-foreground text-sm md:text-base">
