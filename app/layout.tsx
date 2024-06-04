@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: "https://izhar.xyz",
         images: [
             {
-                url: "https://izhar.xyz/images/preview.png",
+                url: "https://izhar.xyz/preview.png",
                 width: 1200,
                 height: 630,
                 alt: "Mohamed Izhar portfolio preview image",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         site: "@TwitterHandle",
         title: "I create digital experiences that inspire",
         description,
-        images: "https://izhar.xyz/images/preview.png",
+        images: "https://izhar.xyz/preview.png",
     },
 };
 
