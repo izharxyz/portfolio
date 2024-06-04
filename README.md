@@ -1,4 +1,4 @@
-![Project Screenshot](public/images/preview.png)
+![Project Screenshot](public/screenshot.png)
 
 <div align="center">
     <h1>Izhar's Portfolio</h1>
