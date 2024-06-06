@@ -1,5 +1,6 @@
 "use client";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import React, {
     useEffect,
@@ -139,15 +140,6 @@ export const Card = ({
         onCardClose(index);
     };
 
-    const staggerVariants: Variants = {
-        initial: { opacity: 0, backgroundColor: "rgba(0,0,0,0)" },
-        animate: {
-            opacity: 1,
-            backgroundColor: "rgba(0,0,0,0.5)",
-            transition: { staggerChildren: 0.2, duration: 0.5 },
-        },
-    };
-
     return (
         <>
             <AnimatePresence>
@@ -197,28 +189,19 @@ export const Card = ({
                 />
 
                 {/* Staggered text on hover for large screens */}
-                <motion.div
-                    className="absolute inset-0 hidden lg:flex flex-col items-center justify-center text-center text-white"
-                    initial="initial"
-                    whileHover="animate"
-                    variants={staggerVariants}
-                >
-                    <motion.p className="text-sm uppercase">
-                        {card.description}
-                    </motion.p>
-                    <motion.h3 className="text-2xl font-bold mt-2">
-                        {card.title}
-                    </motion.h3>
-                    <motion.p className="text-sm mt-2">
-                        {card.category}
-                    </motion.p>
-                </motion.div>
+                <div className="absolute inset-0 bg-black/50"></div>
 
                 {/* Visible text for smaller screens */}
-                <div className="lg:hidden absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black/50 p-4">
-                    <p className="text-sm uppercase">{card.description}</p>
-                    <h3 className="text-2xl font-bold mt-2">{card.title}</h3>
-                    <p className="text-sm mt-2">{card.category}</p>
+                <div className="absolute inset-0 group flex flex-col items-center justify-center text-center text-zinc-50 bg-zinc-950/5 p-4">
+                    <p className="text-sm uppercase lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-5 lg:group-hover:translate-y-0 transition duration-500">
+                        {card.description}
+                    </p>
+                    <h3 className="text-2xl font-bold mt-2 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-5 lg:group-hover:translate-y-0 transition duration-500 delay-100">
+                        {card.title}
+                    </h3>
+                    <p className="text-sm mt-2 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-5 lg:group-hover:translate-y-0 transition duration-500 delay-200">
+                        {card.category}
+                    </p>
                 </div>
             </motion.button>
         </>
