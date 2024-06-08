@@ -5,7 +5,8 @@ import { project } from "@/types";
 export default async function Work() {
     try {
         const response = await fetch(
-            `${process.env.NEXT_PUBLIC_API_URL}/projects/`
+            `${process.env.NEXT_PUBLIC_API_URL}/projects/`,
+            { cache: "force-cache" }
         );
         if (!response.ok) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
@@ -29,8 +30,8 @@ export default async function Work() {
                 <div className="w-full max-w-2xl mx-auto h-48 -mt-14 z-30">
                     <TextHoverEffect text="WORK" />
                 </div>
-                <p className="text-red-500">
-                    Failed to load projects. Please try again later.
+                <p className="text-destructive text-center w-full">
+                    Failed to load projects. Something went wrong.
                 </p>
             </section>
         );
