@@ -9,9 +9,12 @@ import React, {
     createContext,
     useContext,
 } from "react";
+
+import { MdArrowOutward } from "react-icons/md";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
+import Link from "next/link";
 
 interface CarouselProps {
     items: JSX.Element[];
@@ -23,6 +26,8 @@ type CardType = {
     title: string;
     description: string;
     category: string;
+    source_code_url: string;
+    site_url: string;
     detail: React.ReactNode;
 };
 
@@ -100,18 +105,18 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                 </motion.div>
                 <div className="flex justify-end gap-2 mr-10">
                     <button
-                        className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+                        className="relative z-40 h-10 w-10 rounded-full bg-zinc-100 flex items-center justify-center disabled:opacity-50"
                         onClick={scrollLeft}
                         disabled={!canScrollLeft}
                     >
-                        <FaArrowLeftLong className="h-6 w-6 text-gray-500" />
+                        <FaArrowLeftLong className="h-6 w-6 text-zinc-500" />
                     </button>
                     <button
-                        className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+                        className="relative z-40 h-10 w-10 rounded-full bg-zinc-100 flex items-center justify-center disabled:opacity-50"
                         onClick={scrollRight}
                         disabled={!canScrollRight}
                     >
-                        <FaArrowRightLong className="h-6 w-6 text-gray-500" />
+                        <FaArrowRightLong className="h-6 w-6 text-zinc-500" />
                     </button>
                 </div>
             </div>
@@ -154,7 +159,7 @@ export const Card = ({
                         <motion.div
                             ref={containerRef}
                             layoutId={layout ? `card-${card.title}` : undefined}
-                            className="max-w-5xl mx-auto bg-white dark:bg-zinc-900 h-fit z-[60] my-10 p-4 md:p-10 rounded-3xl relative"
+                            className="max-w-5xl mx-auto bg-zinc-50 dark:bg-zinc-900 h-fit z-[60] my-10 p-4 md:p-10 rounded-3xl relative"
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 50 }}
@@ -168,9 +173,37 @@ export const Card = ({
                             <p className="text-base font-medium">
                                 {card.category}
                             </p>
-                            <p className="text-2xl md:text-5xl font-semibold text-zinc-700 mt-4 dark:text-white">
+                            <p className="text-2xl md:text-5xl font-semibold text-zinc-700 mt-4 dark:text-zinc-50">
                                 {card.title}
                             </p>
+                            {card.source_code_url !== "" ||
+                                (card.site_url !== "" && (
+                                    <div className="flex items-center gap-5 mt-2">
+                                        {card.source_code_url !== "" && (
+                                            <Link
+                                                href={card.source_code_url}
+                                                className="py-2 text-base text-purple-600 uppercase flex items-center gap-2"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Source Code{" "}
+                                                <MdArrowOutward className="h-5 w-5" />
+                                            </Link>
+                                        )}
+
+                                        {card.site_url !== "" && (
+                                            <Link
+                                                href={card.site_url}
+                                                className="py-2 text-base text-purple-600 uppercase flex items-center gap-2"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Visit Site{" "}
+                                                <MdArrowOutward className="h-5 w-5" />
+                                            </Link>
+                                        )}
+                                    </div>
+                                ))}
                             <div className="py-10">{card.detail}</div>
                         </motion.div>
                     </div>
@@ -179,7 +212,7 @@ export const Card = ({
             <motion.button
                 layoutId={layout ? `card-${card.title}` : undefined}
                 onClick={handleOpen}
-                className="relative w-80 h-[26rem] md:w-[25rem] md:h-[36rem] rounded-xl bg-gray-100 dark:bg-zinc-900 overflow-hidden flex items-center justify-center"
+                className="relative w-80 h-[26rem] md:w-[25rem] md:h-[36rem] rounded-xl bg-zinc-100 dark:bg-zinc-900 overflow-hidden flex items-center justify-center"
             >
                 <Image
                     src={card.image}
