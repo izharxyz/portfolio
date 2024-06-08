@@ -90,9 +90,9 @@ export default {
 		'rotate': 'rotate 0.5s forwards',
         'rotate-back': 'rotate-back 0.5s forwards',
 		'scroll': "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-	}
+	},
   },
-  plugins: [addVariablesForColors, require("tailwindcss-animate")],
+  plugins: [addVariablesForColors, require("tailwindcss-animate"), require('@tailwindcss/typography')],
 } satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {
