@@ -176,34 +176,37 @@ export const Card = ({
                             <p className="text-2xl md:text-5xl font-semibold text-zinc-700 mt-4 dark:text-zinc-50">
                                 {card.title}
                             </p>
-                            {card.source_code_url !== "" ||
-                                (card.site_url !== "" && (
-                                    <div className="flex items-center gap-5 mt-2">
-                                        {card.source_code_url !== "" && (
-                                            <Link
-                                                href={card.source_code_url}
-                                                className="py-2 text-base text-purple-600 uppercase flex items-center gap-2"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                Source Code{" "}
-                                                <MdArrowOutward className="h-5 w-5" />
-                                            </Link>
-                                        )}
 
-                                        {card.site_url !== "" && (
-                                            <Link
-                                                href={card.site_url}
-                                                className="py-2 text-base text-purple-600 uppercase flex items-center gap-2"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                Visit Site{" "}
-                                                <MdArrowOutward className="h-5 w-5" />
-                                            </Link>
-                                        )}
-                                    </div>
-                                ))}
+                            {/* view source code and visit site buttons */}
+                            {(card.source_code_url !== "" ||
+                                card.site_url !== "") && (
+                                <div className="flex items-center gap-5 mt-2">
+                                    {card.source_code_url !== "" && (
+                                        <Link
+                                            href={card.source_code_url}
+                                            className="py-2 text-base text-purple-600 uppercase flex items-center gap-2"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Source Code{" "}
+                                            <MdArrowOutward className="h-5 w-5" />
+                                        </Link>
+                                    )}
+
+                                    {card.site_url !== "" && (
+                                        <Link
+                                            href={card.site_url}
+                                            className="py-2 text-base text-purple-600 uppercase flex items-center gap-2"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Visit Site{" "}
+                                            <MdArrowOutward className="h-5 w-5" />
+                                        </Link>
+                                    )}
+                                </div>
+                            )}
+
                             <div className="py-10">{card.detail}</div>
                         </motion.div>
                     </div>
