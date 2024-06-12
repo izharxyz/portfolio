@@ -88,7 +88,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         >
             <div className="relative w-full">
                 <motion.div
-                    className="flex w-full overflow-x-scroll py-10 scroll-smooth [scrollbar-width:none]"
+                    className="flex w-full overflow-x-scroll scroll-smooth [scrollbar-width:none]"
                     ref={carouselRef}
                     onScroll={checkScrollability}
                 >
@@ -103,22 +103,20 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                         ))}
                     </div>
                 </motion.div>
-                <div className="flex justify-end gap-2 mr-10">
-                    <button
-                        className="relative z-40 h-10 w-10 rounded-full bg-zinc-100 flex items-center justify-center disabled:opacity-50"
-                        onClick={scrollLeft}
-                        disabled={!canScrollLeft}
-                    >
-                        <FaArrowLeftLong className="h-6 w-6 text-zinc-500" />
-                    </button>
-                    <button
-                        className="relative z-40 h-10 w-10 rounded-full bg-zinc-100 flex items-center justify-center disabled:opacity-50"
-                        onClick={scrollRight}
-                        disabled={!canScrollRight}
-                    >
-                        <FaArrowRightLong className="h-6 w-6 text-zinc-500" />
-                    </button>
-                </div>
+                <button
+                    className="absolute -left-2 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/90 border flex items-center justify-center disabled:opacity-30"
+                    onClick={scrollLeft}
+                    disabled={!canScrollLeft}
+                >
+                    <FaArrowLeftLong className="h-6 w-6 text-muted-foreground" />
+                </button>
+                <button
+                    className="absolute -right-2 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/90 border flex items-center justify-center disabled:opacity-30"
+                    onClick={scrollRight}
+                    disabled={!canScrollRight}
+                >
+                    <FaArrowRightLong className="h-6 w-6 text-muted-foreground" />
+                </button>
             </div>
         </CarouselContext.Provider>
     );
