@@ -12,36 +12,39 @@ export default function Footer() {
                 <div className="text-center uppercase text-sm md:text-base">
                     <Logo height={64} width={64} />
                     <div className="flex gap-5 mt-5 flex-wrap items-center justify-center text-muted-foreground">
-                        <Link href="mailto:mohamed@izhar.xyz">
+                        <Link
+                            href="mailto:mohamed@izhar.xyz"
+                            className="hover:text-primary transition duration-300"
+                        >
                             mohamed@izhar.xyz
                         </Link>
                     </div>
                 </div>
                 <HorizontalLine />
-                <nav className="flex gap-5 text-sm md:text-base uppercase text-muted-foreground items-center justify-center flex-wrap">
+                <nav className="flex gap-5 text-sm md:text-base uppercase text-muted-foreground items-center justify-center flex-wrap transition-all">
                     <Link
-                        href="#about"
+                        href="/#about"
                         className="hover:text-primary duration-300"
                     >
                         About
                     </Link>
                     <Link
-                        href="#work"
+                        href="/#work"
                         className="hover:text-primary duration-300"
                     >
                         Work
                     </Link>
                     <Link
-                        href="#stories"
+                        href="/#stories"
                         className="hover:text-primary duration-300"
                     >
                         Customer Stories
                     </Link>
-                    <Link href="#contact" className="hover:text-primary">
+                    <Link href="/#contact" className="hover:text-primary">
                         Contact
                     </Link>
                     <Link
-                        href="#blog"
+                        href="/#blog"
                         className="hover:text-primary duration-300"
                     >
                         Blog
@@ -74,7 +77,7 @@ export default function Footer() {
                         <FaLinkedin className="h-6 w-6 md:h-7 md:w-7" />
                     </Link>
                     <Link
-                        href="#"
+                        href="/#"
                         className="hover:text-primary hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"

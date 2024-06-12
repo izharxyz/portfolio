@@ -12,13 +12,13 @@ import ThemeToggler from "@/components/ThemeToggler";
 import { Button } from "@/components/ui/Button";
 
 const navs = [
-    { text: "About", href: "#about" },
-    { text: "Work", href: "#work" },
+    { text: "About", href: "/#about" },
+    { text: "Work", href: "/#work" },
     {
         text: "Customer Stories",
-        href: "#stories",
+        href: "/#stories",
     },
-    { text: "Contact", href: "#contact" },
+    { text: "Contact", href: "/#contact" },
     { text: "Blog", href: "/blog" },
 ];
 
@@ -68,17 +68,28 @@ export default function Header() {
                                 href={
                                     text === "Blog"
                                         ? "/blog"
-                                        : `#${text.toLowerCase()}`
+                                        : `/#${text.toLowerCase()}`
                                 }
-                                className="hover:text-primary transition duration-300"
+                                className="hover:text-accent transition duration-300"
                             >
                                 {text}
                             </Link>
                         ))}
+                        <Link
+                            href="https://github.com/izharxyz"
+                            className="hover:text-accent transition duration-300"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Github
+                        </Link>
                     </nav>
                     <div className="flex items-center gap-3 lg:gap-5 justify-end w-full">
                         <ThemeToggler />
-                        <Link href="#contact" className="-mr-2 hidden lg:block">
+                        <Link
+                            href="/#contact"
+                            className="-mr-2 hidden lg:block"
+                        >
                             <Button>Get in Touch</Button>
                         </Link>
                         <button
@@ -121,6 +132,15 @@ export default function Header() {
                             {link.text}
                         </Link>
                     ))}
+                    <Link
+                        href="https://github.com/izharxyz"
+                        className="hover:text-primary text-xl font-light transition duration-300 uppercase"
+                        onClick={() => setIsMenuOpen(false)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Github
+                    </Link>
                 </div>
                 <HorizontalLine />
             </motion.div>
