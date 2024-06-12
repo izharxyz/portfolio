@@ -104,14 +104,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     </div>
                 </motion.div>
                 <button
-                    className="absolute -left-2 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/90 border flex items-center justify-center disabled:opacity-30"
+                    className="absolute -left-2 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/70 border flex items-center justify-center disabled:opacity-30 transition duration-300"
                     onClick={scrollLeft}
                     disabled={!canScrollLeft}
                 >
                     <FaArrowLeftLong className="h-6 w-6 text-muted-foreground" />
                 </button>
                 <button
-                    className="absolute -right-2 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/90 border flex items-center justify-center disabled:opacity-30"
+                    className="absolute -right-2 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/70 border flex items-center justify-center disabled:opacity-30 transition duration-300"
                     onClick={scrollRight}
                     disabled={!canScrollRight}
                 >
