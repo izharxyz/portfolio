@@ -27,8 +27,8 @@ export function Testimonials() {
                 Trusted by the kindest customers
             </h2>
             <p className="text-muted-foreground text-sm md:text-base text-center mb-10">
-                Here&apos;s a glimpse into the heartfelt experiences of our
-                incredible customers. Your trust fuels our passion.
+                Here&apos;s a glimpse into the heartfelt experiences of my
+                incredible customers. Your trust fuels my passion.
             </p>
             {/* Card container with ref */}
             <div
