@@ -11,3 +11,11 @@ export const Button = ({ children }: { children: React.ReactNode }) => {
         </button>
     );
 };
+
+export const PrimaryButton = ({ children }: { children: React.ReactNode }) => {
+    return (
+        <button className="py-4 px-8 bg-primary text-primary-foreground text-xs uppercase">
+            {children}
+        </button>
+    );
+};
