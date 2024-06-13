@@ -10,3 +10,19 @@ export interface project {
     created_at: string;
     updated_at: string;
 }
+
+export interface Category {
+    id: number;
+    name: string;
+    slug: string;
+    description: string;
+    image: string;
+}
+
+export interface Post {
+    title: string;
+    description: string;
+    image: string;
+    categories?: string[];
+    slug: string;
+}
