@@ -1,3 +1,10 @@
+export interface PaginatedAPIResponse<T> {
+    count: number;
+    next: string;
+    previous: string;
+    results: T[];
+}
+
 export interface project {
     id: number;
     title: string;
@@ -19,10 +26,23 @@ export interface Category {
     image: string;
 }
 
+export type CategoryResponse = PaginatedAPIResponse<Category>;
+
+export interface PostContent {
+    title: string;
+    content: string;
+}
+
 export interface Post {
     title: string;
     description: string;
     image: string;
-    categories?: string[];
+    categories?: Category[];
     slug: string;
+    created_at: string;
+    updated_at: string;
+
+    content: PostContent[];
 }
+
+export type PostResponse = PaginatedAPIResponse<Post>;
