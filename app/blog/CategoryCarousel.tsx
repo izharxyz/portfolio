@@ -79,7 +79,7 @@ export const CategoryCarousel = ({
 export const CategoryCard = ({ category }: { category: Category }) => {
     return (
         <Link
-            href={category.slug}
+            href={`/blog/categories/${category.slug}`}
             className="block relative w-64 h-80 rounded-lg overflow-hidden"
         >
             <motion.div className="relative w-full h-full">

@@ -36,8 +36,8 @@ export default function FeaturedCard({ post }: { post: Post }) {
                     </h2>
                     <div className="flex gap-3 text-xs md:text-sm text-accent font-light mt-4">
                         {post.categories?.map((category) => (
-                            <span key={category} className="uppercase">
-                                {category}
+                            <span key={category.id} className="uppercase">
+                                {category.name}
                             </span>
                         ))}
                     </div>
