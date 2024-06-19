@@ -27,14 +27,21 @@ export default function FeaturedCard({ post }: { post: Post }) {
                 <div className="w-full md:max-w-lg">
                     <div className="mb-4 flex items-center justify-start">
                         <LuAlarmClock className="h-5 w-5 text-muted-foreground" />
-                        <span className="text-muted-foreground uppercase text-xs md:text-sm font-light ml-2">
-                            2 days ago
+                        <span className="text-muted-foreground text-xs md:text-sm font-light ml-2">
+                            {new Date(post.updated_at).toLocaleDateString(
+                                "en-GB",
+                                {
+                                    day: "2-digit",
+                                    month: "short",
+                                    year: "numeric",
+                                }
+                            )}
                         </span>
                     </div>
                     <h2 className="text-3xl md:text-4xl text-primary">
                         {post.title}
                     </h2>
-                    <div className="flex gap-3 text-xs md:text-sm text-accent font-light mt-4">
+                    <div className="flex gap-3 text-xs md:text-sm text-accent mt-4">
                         {post.categories?.map((category) => (
                             <span key={category.id} className="uppercase">
                                 {category.name}

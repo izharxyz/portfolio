@@ -31,8 +31,12 @@ export default function Card({ post }: { post: Post }) {
             <div className="mt-4 flex items-center justify-between">
                 <div className="flex items-center justify-start">
                     <LuAlarmClock className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground uppercase text-xs font-light ml-2">
-                        2 days ago
+                    <span className="text-muted-foreground text-xs ml-2">
+                        {new Date(post.updated_at).toLocaleDateString("en-GB", {
+                            day: "2-digit",
+                            month: "short",
+                            year: "numeric",
+                        })}
                     </span>
                 </div>
                 <p className="text-xs text-muted-foreground uppercase">
