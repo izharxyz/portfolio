@@ -21,9 +21,7 @@ export default async function Blog() {
 
     return (
         <main className="container w-full my-32 min-h-screen h-fit">
-            <div className="p-4 border rounded-xl">
-                <FeaturedCard post={featuredPost} />
-            </div>
+            <FeaturedCard post={featuredPost} />
 
             <div className="pt-16 md:pt-32 text-left">
                 <h3 className="text-2xl md:text-3xl text-accent font-semibold">

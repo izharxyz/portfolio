@@ -3,21 +3,21 @@ import Link from "next/link";
 
 import { LuAlarmClock } from "react-icons/lu";
 
-import { Button } from "@/components/ui/Button";
+import { PrimaryButton } from "@/components/ui/Button";
 import { Post } from "@/types";
 
 export default function FeaturedCard({ post }: { post: Post }) {
     return (
-        <div className="flex flex-col gap-5 md:gap-10 md:flex-row-reverse w-full rounded-xl overflow-x-hidden">
+        <div className="p-4 border flex flex-col gap-5 md:gap-10 md:flex-row-reverse w-full overflow-x-hidden">
             <div className="w-full md:w-1/2 relative">
                 <Image
                     src={post.image}
                     height={1000}
                     width={1000}
                     alt={post.title}
-                    className="h-full w-full rounded-xl object-cover aspect-video"
+                    className="h-full w-full object-cover aspect-video"
                 />
-                <div className="absolute bottom-0 h-14 md:h-24 w-full rounded-b-xl bg-zinc-950/10 backdrop-blur-sm flex items-center justify-center">
+                <div className="absolute bottom-0 h-14 md:h-24 w-full bg-zinc-950/20 backdrop-blur-sm flex items-center justify-center">
                     <span className="text-zinc-100 font-light text-sm text-center uppercase">
                         Featured
                     </span>
@@ -56,7 +56,7 @@ export default function FeaturedCard({ post }: { post: Post }) {
                             5 min read
                         </p>
                         <Link href={`/blog/${post.slug}`}>
-                            <Button>Read more</Button>
+                            <PrimaryButton>Read more</PrimaryButton>
                         </Link>
                     </div>
                 </div>

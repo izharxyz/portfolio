@@ -5,7 +5,7 @@ import { Post } from "@/types";
 
 export default function Card({ post }: { post: Post }) {
     return (
-        <div className="w-full p-4 border rounded-xl">
+        <div className="w-full p-4 border">
             <div className="aspect-video w-full">
                 <Link href={`/blog/${post.slug}`}>
                     <Image
@@ -13,7 +13,7 @@ export default function Card({ post }: { post: Post }) {
                         height={500}
                         width={500}
                         alt={post.title}
-                        className="h-full w-full object-cover rounded-xl"
+                        className="h-full w-full object-cover"
                     />
                 </Link>
             </div>

@@ -35,7 +35,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex w-full items-center justify-center lg:justify-end">
-                    <div className="lg:max-w-xl w-full border rounded p-5 lg:p-10">
+                    <div className="lg:max-w-xl w-full border p-5 lg:p-10">
                         <h4 className="text-xl lg:text-2xl font-semibold">
                             Send me a message
                         </h4>
