@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import React, {
@@ -9,7 +10,6 @@ import React, {
     useRef,
     useState,
 } from "react";
-import { RxCross1 } from "react-icons/rx";
 
 interface ModalContextType {
     open: boolean;
@@ -20,6 +20,23 @@ const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
     const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (
+                (event.ctrlKey || event.metaKey) &&
+                event.key.toLowerCase() === "k"
+            ) {
+                event.preventDefault();
+                setOpen(true);
+            } else if (event.key === "Escape") {
+                setOpen(false);
+            }
+        };
+
+        document.addEventListener("keydown", handleKeyDown);
+        return () => document.removeEventListener("keydown", handleKeyDown);
+    }, []);
 
     return (
         <ModalContext.Provider value={{ open, setOpen }}>
@@ -68,7 +85,7 @@ export const ModalBody = ({
     children: ReactNode;
     className?: string;
 }) => {
-    const { open } = useModal();
+    const { open, setOpen } = useModal();
 
     useEffect(() => {
         if (open) {
@@ -79,7 +96,6 @@ export const ModalBody = ({
     }, [open]);
 
     const modalRef = useRef(null);
-    const { setOpen } = useModal();
     useOutsideClick(modalRef, () => setOpen(false));
 
     return (
@@ -97,14 +113,14 @@ export const ModalBody = ({
                         opacity: 0,
                         backdropFilter: "blur(0px)",
                     }}
-                    className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full  flex items-center justify-center z-50"
+                    className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-50"
                 >
                     <Overlay />
 
                     <motion.div
                         ref={modalRef}
                         className={cn(
-                            "min-h-[50%] max-h-[90%] md:max-w-[60%] lg:max-w-[50%] xl:max-w-[40%] mx-4 bg-background border border-transparent dark:border-zinc-800 relative z-50 flex flex-col flex-1 overflow-hidden",
+                            "min-h-[50%] max-h-[90%] md:max-w-[60%] lg:max-w-[50%] xl:max-w-[40%] mx-4 rounded-xl bg-background border border-transparent dark:border-zinc-800 relative z-50 flex flex-col flex-1 overflow-hidden",
                             className
                         )}
                         initial={{
@@ -131,12 +147,35 @@ export const ModalBody = ({
 export const ModalContent = ({
     children,
     className,
+    onInputChange,
 }: {
     children: ReactNode;
     className?: string;
+    onInputChange: (value: string) => void;
 }) => {
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    // Focus the input field when the modal opens
+    const { open } = useModal();
+    useEffect(() => {
+        if (open && inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, [open]);
+
     return (
-        <div className={cn("flex flex-col flex-1 p-8 md:p-10", className)}>
+        <div className={cn("flex flex-col flex-1 p-4 md:p-10", className)}>
+            <form onSubmit={(e) => e.preventDefault()} className="flex">
+                <input
+                    ref={inputRef}
+                    className="w-full border px-3 py-2 bg-transparent text-primary focus:outline-none"
+                    placeholder="Search the blog..."
+                    onChange={(e) => onInputChange(e.target.value)}
+                />
+                <div className="hidden text-muted-foreground border lg:flex items-center justify-center px-2 md:px-3 ml-2 text-xs uppercase">
+                    Esc
+                </div>
+            </form>
             {children}
         </div>
     );
