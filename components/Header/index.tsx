@@ -11,6 +11,8 @@ import HorizontalLine from "@/components/ui/HorizontalLine";
 import ThemeToggler from "@/components/ThemeToggler";
 import { Button } from "@/components/ui/Button";
 
+import SearchModal from "./Search";
+
 const navs = [
     { text: "About", href: "/#about" },
     { text: "Work", href: "/#work" },
@@ -27,7 +29,7 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleScroll = () => {
-        setIsScrolled(window.scrollY > 200);
+        setIsScrolled(window.scrollY > 80);
     };
 
     useEffect(() => {
@@ -85,6 +87,7 @@ export default function Header() {
                         </Link>
                     </nav>
                     <div className="flex items-center gap-3 lg:gap-5 justify-end w-full">
+                        <SearchModal />
                         <ThemeToggler />
                         <Link
                             href="/#contact"
