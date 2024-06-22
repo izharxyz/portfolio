@@ -15,17 +15,17 @@ export default async function BlogPost({
     const post: Post = await response.json();
 
     return (
-        <main className="min-h-screen w-screen overflow-x-hidden">
-            <div className="h-screen w-full container relative">
+        <main className="min-h-[100svh] w-screen overflow-x-hidden">
+            <div className="h-[100svh] w-full container relative">
                 <Image
                     src={post.image}
                     alt={post.title}
                     width={1900}
                     height={1000}
-                    className="h-screen object-cover"
+                    className="h-[100svh] object-cover"
                 />
-                <div className="absolute inset-0 h-screen bg-gradient-to-r from-background via-transparent to-background" />
-                <div className="absolute inset-0 h-screen bg-gradient-to-b from-background to-transparent backdrop-blur-lg">
+                <div className="absolute inset-0 h-[100svh] bg-gradient-to-r from-background via-transparent to-background" />
+                <div className="absolute inset-0 h-[100svh] bg-gradient-to-b from-background to-transparent backdrop-blur-lg">
                     <div className="container h-full w-full max-w-4xl flex flex-col justify-end items-end py-16 text-primary">
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
                             {post.title}
