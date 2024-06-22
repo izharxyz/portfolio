@@ -11,7 +11,7 @@ import HorizontalLine from "@/components/ui/HorizontalLine";
 import ThemeToggler from "@/components/ThemeToggler";
 import { Button } from "@/components/ui/Button";
 
-import SearchModal from "./Search";
+import Search from "./Search";
 
 const navs = [
     { text: "About", href: "/#about" },
@@ -87,7 +87,7 @@ export default function Header() {
                         </Link>
                     </nav>
                     <div className="flex items-center gap-3 lg:gap-5 justify-end w-full">
-                        <SearchModal />
+                        <Search />
                         <ThemeToggler />
                         <Link
                             href="/#contact"

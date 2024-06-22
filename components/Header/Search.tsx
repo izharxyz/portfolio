@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/SearchModal";
 import { useState } from "react";
 
-export default function SearchModal() {
+export default function Search() {
     const pathname = usePathname();
     const shouldRenderSearchIcon = pathname?.startsWith("/blog");
 
