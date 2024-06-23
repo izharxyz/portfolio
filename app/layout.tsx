@@ -41,10 +41,10 @@ export const metadata: Metadata = {
         title: "I create digital experiences that inspire",
         description,
         type: "website",
-        url: "https://izhar.xyz",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
         images: [
             {
-                url: "https://izhar.xyz/preview.png",
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/preview.png`,
                 width: 1200,
                 height: 630,
                 alt: "Mohamed Izhar portfolio preview image",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         site: "@TwitterHandle",
         title: "I create digital experiences that inspire",
         description,
-        images: "https://izhar.xyz/preview.png",
+        images: `${process.env.NEXT_PUBLIC_SITE_URL}/preview.png`,
     },
 };
 
