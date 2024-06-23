@@ -28,20 +28,22 @@ export interface Category {
 
 export type CategoryResponse = PaginatedAPIResponse<Category>;
 
-export interface PostContent {
-    title: string;
-    content: string;
-}
-
 export interface Post {
     title: string;
     description: string;
     image: string;
-    categories?: Category[];
+    categories?: Category[] | null;
     slug: string;
     created_at: string;
     updated_at: string;
+}
 
+export interface PostContent {
+    image?: string | null;
+    content: string;
+}
+
+export interface PostDetail extends Post {
     content: PostContent[];
 }
 
