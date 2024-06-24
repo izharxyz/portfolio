@@ -1,5 +1,51 @@
 import Image from "next/image";
-import { Post } from "@/types";
+import { Metadata } from "next";
+
+import { PostDetail } from "@/types";
+import { LuAlarmClock } from "react-icons/lu";
+
+import RelatedPosts from "./RelatedPosts";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+    const slug = (await params).slug;
+
+    const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/blog/posts/${slug}/`,
+        { cache: "force-cache" }
+    );
+
+    const post: PostDetail = await response.json();
+
+    return {
+        title: post.title,
+        description: post.description,
+        openGraph: {
+            title: post.title,
+            description: post.description,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${slug}`,
+            type: "article",
+            images: [
+                {
+                    url: post.image,
+                    alt: post.title,
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+            siteName: "Mohamed Izhar",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description: post.description,
+            images: [post.image],
+        },
+    };
+}
 
 export default async function BlogPost({
     params,
@@ -12,7 +58,7 @@ export default async function BlogPost({
         { cache: "force-cache" }
     );
 
-    const post: Post = await response.json();
+    const post: PostDetail = await response.json();
 
     return (
         <main className="min-h-[100svh] w-screen overflow-x-hidden">
@@ -26,7 +72,20 @@ export default async function BlogPost({
                 />
                 <div className="absolute inset-0 h-[100svh] bg-gradient-to-r from-background via-transparent to-background" />
                 <div className="absolute inset-0 h-[100svh] bg-gradient-to-b from-background to-transparent backdrop-blur-lg">
-                    <div className="container h-full w-full max-w-4xl flex flex-col justify-end items-end py-16 text-primary">
+                    <div className="container h-full w-full max-w-4xl flex flex-col justify-end items-start py-16 text-primary">
+                        <div className="mb-4 flex items-center justify-start">
+                            <LuAlarmClock className="h-5 w-5 text-muted-foreground" />
+                            <span className="text-muted-foreground text-sm md:text-base ml-2 uppercase">
+                                {new Date(post.updated_at).toLocaleDateString(
+                                    "en-GB",
+                                    {
+                                        day: "2-digit",
+                                        month: "short",
+                                        year: "numeric",
+                                    }
+                                )}
+                            </span>
+                        </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
                             {post.title}
                         </h1>
@@ -40,8 +99,39 @@ export default async function BlogPost({
                                 </span>
                             ))}
                         </div>
+                        <p className="text-foreground text-sm md:text-base mt-4">
+                            {post.description}
+                        </p>
                     </div>
                 </div>
+            </div>
+            <article className="prose lg:prose-lg prose-zinc dark:prose-invert prose-pre:bg-secondary prose-pre:text-secondary-foreground container max-w-4xl">
+                {post.content.map((content, idx) => (
+                    <div className="space-y-5" key={idx}>
+                        {content.image && (
+                            <div className="h-full w-full aspect-video overflow-hidden">
+                                <Image
+                                    src={content.image}
+                                    alt={"article content image"}
+                                    width={1000}
+                                    height={1000}
+                                    className="w-full h-full aspect-video object-cover"
+                                />
+                            </div>
+                        )}
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: content.content,
+                            }}
+                        />
+                    </div>
+                ))}
+            </article>
+            <div className="container py-16 md:py-32">
+                <h3 className="text-2xl md:text-3xl text-accent font-semibold mb-10">
+                    Similar Posts
+                </h3>
+                <RelatedPosts slug={slug} />
             </div>
         </main>
     );
