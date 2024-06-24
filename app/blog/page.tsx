@@ -1,8 +1,42 @@
+import { Metadata } from "next";
+
 import FeaturedCard from "./FeaturedCard";
 import { CategoryCarousel } from "./CategoryCarousel";
 import { CategoryResponse, Post } from "@/types";
 
 import LatestPosts from "./LatestPosts";
+
+export async function generateMetadata(): Promise<Metadata> {
+    const title = "Blog | Mohamed Izhar";
+    const description =
+        "Welcome to my blog! Here you can find stories, tutorials, and more.";
+
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog`,
+            type: "website",
+            images: [
+                {
+                    url: `${process.env.NEXT_PUBLIC_SITE_URL}/preview.png`,
+                    alt: "Mohamed Izhar portfolio preview image",
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+            siteName: "Mohamed Izhar",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: [`${process.env.NEXT_PUBLIC_SITE_URL}/preview.png`],
+        },
+    };
+}
 
 export default async function Blog() {
     const response = await fetch(
