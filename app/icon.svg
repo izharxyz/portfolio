@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="1" /> 
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="1" /> 
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="1" /> 
+    </linearGradient>
+  </defs>
+
+  <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="transparent" stroke="url(#borderGradient)" stroke-width="6" /> 
+
+  <text x="50%" y="54%"  text-anchor="middle" dominant-baseline="middle" font-size="48" font-weight="900" fill="url(#textGradient)">
+    IZ
+  </text>
+</svg>
