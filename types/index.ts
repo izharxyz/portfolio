@@ -24,6 +24,7 @@ export interface Category {
     slug: string;
     description: string;
     image: string;
+    posts_count: number;
 }
 
 export type CategoryResponse = PaginatedAPIResponse<Category>;

@@ -89,8 +89,12 @@ export const CategoryCard = ({ category }: { category: Category }) => {
                     fill
                     className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent flex flex-col items-start justify-end text-white p-4 text-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent from-15% to-100% flex flex-col items-start justify-end text-primary-foreground dark:text-primary p-4 text-center">
                     <h3 className="text-xl font-semibold">{category.name}</h3>
+                    <p className="mt-1 text-xs md:text-sm text-muted-foreground">
+                        {category.posts_count}{" "}
+                        {category.posts_count <= 1 ? "Post" : "Posts"}
+                    </p>
                     <p className="text-sm mt-2 text-left">
                         {category.description}
                     </p>
