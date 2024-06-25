@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import { PostDetail } from "@/types";
-import { LuAlarmClock } from "react-icons/lu";
+import { CgCalendarTwo } from "react-icons/cg";
 
 import RelatedPosts from "./RelatedPosts";
 
@@ -74,7 +74,7 @@ export default async function BlogPost({
                 <div className="absolute inset-0 h-[100svh] bg-gradient-to-b from-background to-transparent backdrop-blur-lg">
                     <div className="container h-full w-full max-w-4xl flex flex-col justify-end items-start py-16 text-primary">
                         <div className="mb-4 flex items-center justify-start">
-                            <LuAlarmClock className="h-5 w-5 text-muted-foreground" />
+                            <CgCalendarTwo className="h-5 w-5 text-muted-foreground" />
                             <span className="text-muted-foreground text-sm md:text-base ml-2 uppercase">
                                 {new Date(post.updated_at).toLocaleDateString(
                                     "en-GB",

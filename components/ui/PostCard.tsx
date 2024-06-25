@@ -1,13 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LuAlarmClock } from "react-icons/lu";
+import { RiTimer2Line } from "react-icons/ri";
+import { CgCalendarTwo } from "react-icons/cg";
+import { MdArrowOutward } from "react-icons/md";
+
 import { Post } from "@/types";
 
 export default function Card({ post }: { post: Post }) {
     return (
         <div className="w-full p-4 border">
-            <div className="aspect-video w-full">
-                <Link href={`/blog/${post.slug}`}>
+            <div className="aspect-video w-full relative">
+                <Link href={`/blog/${post.slug}`} className="">
                     <Image
                         src={post.image}
                         height={500}
@@ -15,6 +18,9 @@ export default function Card({ post }: { post: Post }) {
                         alt={post.title}
                         className="h-full w-full object-cover"
                     />
+                    <div className="absolute bottom-2 right-2 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/50 border flex items-center justify-center">
+                        <MdArrowOutward className="h-4 w-4 text-muted-foreground " />
+                    </div>
                 </Link>
             </div>
             <div className="flex gap-2 mt-4 text-accent text-xs md:text-sm uppercase">
@@ -30,8 +36,8 @@ export default function Card({ post }: { post: Post }) {
             </p>
             <div className="mt-4 flex items-center justify-between">
                 <div className="flex items-center justify-start">
-                    <LuAlarmClock className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-muted-foreground text-xs ml-2">
+                    <CgCalendarTwo className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-muted-foreground text-xs ml-2 uppercase">
                         {new Date(post.updated_at).toLocaleDateString("en-GB", {
                             day: "2-digit",
                             month: "short",
@@ -39,8 +45,8 @@ export default function Card({ post }: { post: Post }) {
                         })}
                     </span>
                 </div>
-                <p className="text-xs text-muted-foreground uppercase">
-                    5 min read
+                <p className="text-xs text-muted-foreground uppercase flex items-center justify-end">
+                    <RiTimer2Line className="h-4 w-4 mr-2" /> 5 min read
                 </p>
             </div>
         </div>

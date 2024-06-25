@@ -108,14 +108,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     onClick={scrollLeft}
                     disabled={!canScrollLeft}
                 >
-                    <FaArrowLeftLong className="h-6 w-6 text-muted-foreground" />
+                    <FaArrowLeftLong className="h-4 w-4 text-muted-foreground" />
                 </button>
                 <button
                     className="absolute -right-2 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/70 border flex items-center justify-center disabled:opacity-30 transition duration-300"
                     onClick={scrollRight}
                     disabled={!canScrollRight}
                 >
-                    <FaArrowRightLong className="h-6 w-6 text-muted-foreground" />
+                    <FaArrowRightLong className="h-4 w-4 text-muted-foreground" />
                 </button>
             </div>
         </CarouselContext.Provider>

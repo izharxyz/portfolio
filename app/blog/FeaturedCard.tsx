@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { LuAlarmClock } from "react-icons/lu";
+import { RiTimer2Line } from "react-icons/ri";
+import { CgCalendarTwo } from "react-icons/cg";
 
 import { PrimaryButton } from "@/components/ui/Button";
 import { Post } from "@/types";
@@ -9,7 +10,10 @@ import { Post } from "@/types";
 export default function FeaturedCard({ post }: { post: Post }) {
     return (
         <div className="p-4 border flex flex-col gap-5 md:gap-10 md:flex-row-reverse w-full overflow-x-hidden">
-            <div className="w-full md:w-1/2 relative">
+            <Link
+                href={`/blog/${post.slug}`}
+                className="w-full md:w-1/2 relative"
+            >
                 <Image
                     src={post.image}
                     height={1000}
@@ -22,12 +26,12 @@ export default function FeaturedCard({ post }: { post: Post }) {
                         Featured
                     </span>
                 </div>
-            </div>
+            </Link>
             <div className="w-full md:w-1/2 bg-card flex flex-col items-start justify-center">
                 <div className="w-full md:max-w-lg">
                     <div className="mb-4 flex items-center justify-start">
-                        <LuAlarmClock className="h-5 w-5 text-muted-foreground" />
-                        <span className="text-muted-foreground text-xs md:text-sm font-light ml-2">
+                        <CgCalendarTwo className="h-5 w-5 text-muted-foreground" />
+                        <span className="text-muted-foreground text-xs md:text-sm font-light ml-2 uppercase">
                             {new Date(post.updated_at).toLocaleDateString(
                                 "en-GB",
                                 {
@@ -52,9 +56,10 @@ export default function FeaturedCard({ post }: { post: Post }) {
                         {post.description}
                     </p>
                     <div className="flex flex-row justify-between gap-5 md:flex-row-reverse md:justify-end items-center w-full">
-                        <p className="text-xs text-muted-foreground uppercase">
-                            5 min read
-                        </p>
+                        <div className="text-muted-foreground text-xs md:text-sm font-light uppercase flex items-center justify-start">
+                            <RiTimer2Line className="h-5 w-5 mr-2" />
+                            <span>5 min read</span>
+                        </div>
                         <Link href={`/blog/${post.slug}`}>
                             <PrimaryButton>Read more</PrimaryButton>
                         </Link>
