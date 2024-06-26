@@ -40,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Blog() {
     const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/blog/categories/`,
+        `${process.env.NEXT_PUBLIC_API_URL}/blog/categories/?page=1&page_size=36`,
         { cache: "force-cache" }
     );
 
@@ -54,7 +54,7 @@ export default async function Blog() {
     const featuredPost: Post = await featuredResponse.json();
 
     return (
-        <main className="container w-full my-32 min-h-screen h-fit">
+        <div className="container w-full h-fit">
             <FeaturedCard post={featuredPost} />
 
             <div className="pt-16 md:pt-32 text-left">
@@ -70,6 +70,6 @@ export default async function Blog() {
             <div className="pt-16 md:pt-32">
                 <LatestPosts />
             </div>
-        </main>
+        </div>
     );
 }

@@ -61,7 +61,7 @@ export default async function BlogPost({
     const post: PostDetail = await response.json();
 
     return (
-        <main className="min-h-[100svh] w-screen overflow-x-hidden">
+        <div className="min-h-[100svh] w-screen overflow-x-hidden">
             <div className="h-[100svh] w-full container relative">
                 <Image
                     src={post.image}
@@ -133,6 +133,6 @@ export default async function BlogPost({
                 </h3>
                 <RelatedPosts slug={slug} />
             </div>
-        </main>
+        </div>
     );
 }
