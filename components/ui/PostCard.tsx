@@ -18,7 +18,7 @@ export default function Card({ post }: { post: Post }) {
                         alt={post.title}
                         className="h-full w-full object-cover"
                     />
-                    <div className="absolute bottom-2 right-2 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/50 border flex items-center justify-center">
+                    <div className="absolute bottom-2 right-2 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/70 border flex items-center justify-center">
                         <MdArrowOutward className="h-4 w-4 text-muted-foreground " />
                     </div>
                 </Link>

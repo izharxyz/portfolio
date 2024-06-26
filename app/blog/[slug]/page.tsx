@@ -127,7 +127,7 @@ export default async function BlogPost({
                     </div>
                 ))}
             </article>
-            <div className="container py-16 md:py-32">
+            <div className="container pt-16 md:pt-32">
                 <h3 className="text-2xl md:text-3xl text-accent font-semibold mb-10">
                     Similar Posts
                 </h3>
