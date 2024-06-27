@@ -1,4 +1,5 @@
 import React from "react";
+import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 
 export default function BlogLayout({
     children,
@@ -6,6 +7,38 @@ export default function BlogLayout({
     children: React.ReactNode;
 }) {
     return (
-        <main className="pt-32 pb-16 md:pb-32 min-h-screen">{children}</main>
+        <main className="pt-32 pb-16 md:pb-32 min-h-screen">
+            {children}
+            <div className="container mt-16 md:mt-32">
+                <div className="h-96 relative border">
+                    <div className="absolute inset-0 h-full w-full flex flex-col justify-center items-center p-4">
+                        <h4 className="text-2xl md:text-3xl uppercase text-foreground text-center w-full">
+                            Stay curious. Stay inspired. Let the stories find
+                            you.
+                        </h4>
+                        <p className="mt-5 lg:max-w-4xl text-center text-muted-foreground">
+                            Subscribe to get fresh insights, coding tips, and
+                            the latest in tech delivered straight to your inbox.
+                            Whether you&apos;re a beginner or an expert,
+                            there&apos;s always something new to explore. Be the
+                            first to explore stories that inspire, inform, and
+                            ignite your imagination
+                        </p>
+                        <form className="max-w-4xl w-full space-y-5">
+                            <div className="mt-5 md:mt-10 w-full">
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="name@email.com"
+                                    className="w-full border px-3 py-2 bg-transparent text-primary focus:outline-none focus:border-purple-600 transition duration-300"
+                                />
+                            </div>
+                        </form>
+                    </div>
+                    <BackgroundBeams />
+                </div>
+            </div>
+        </main>
     );
 }
