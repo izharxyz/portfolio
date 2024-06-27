@@ -25,7 +25,7 @@ export default function BlogLayout({
                             ignite your imagination
                         </p>
                         <form className="max-w-4xl w-full space-y-5">
-                            <div className="mt-5 md:mt-10 w-full">
+                            <div className="mt-5 md:mt-10 w-full relative">
                                 <input
                                     id="email"
                                     name="email"
@@ -33,6 +33,12 @@ export default function BlogLayout({
                                     placeholder="name@email.com"
                                     className="w-full border px-3 py-2 bg-transparent text-primary focus:outline-none focus:border-purple-600 transition duration-300"
                                 />
+                                <button
+                                    type="submit"
+                                    className="absolute right-0 top-0 bottom-0 bg-primary text-primary-foreground py-2 px-5 uppercase text-xs"
+                                >
+                                    Subscribe
+                                </button>
                             </div>
                         </form>
                     </div>
