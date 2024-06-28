@@ -1,4 +1,3 @@
-import React from "react";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 
 export default function BlogLayout({
@@ -12,7 +11,7 @@ export default function BlogLayout({
             <div className="container mt-16 md:mt-32">
                 <div className="h-96 relative border">
                     <div className="absolute inset-0 h-full w-full flex flex-col justify-center items-center p-4">
-                        <h4 className="text-2xl md:text-3xl uppercase text-foreground text-center w-full">
+                        <h4 className="text-2xl md:text-3xl uppercase text-foreground text-center w-full tracking-tight">
                             Stay curious. Stay inspired. Let the stories find
                             you.
                         </h4>
@@ -31,6 +30,7 @@ export default function BlogLayout({
                                     name="email"
                                     type="email"
                                     placeholder="name@email.com"
+                                    autoComplete="email"
                                     className="w-full border px-3 py-2 bg-transparent text-primary focus:outline-none focus:border-purple-600 transition duration-300"
                                 />
                                 <button
