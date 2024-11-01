@@ -11,7 +11,7 @@ export default function BlogLayout({
             <div className="container mb-16 md:mb-32">
                 <div className="h-96 relative border">
                     <div className="absolute inset-0 h-full w-full flex flex-col justify-center items-center p-4">
-                        <h4 className="text-2xl md:text-3xl uppercase text-foreground text-center w-full tracking-tight">
+                        <h4 className="text-xl md:text-3xl uppercase text-foreground text-center w-full tracking-tight">
                             Stay curious. Stay inspired. Let the stories find
                             you.
                         </h4>
