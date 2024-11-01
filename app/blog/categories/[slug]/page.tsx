@@ -35,7 +35,7 @@ export default async function PostsByCategory({
             : null;
 
     return currentCategory ? (
-        <div className="w-full container">
+        <div className="w-full container pt-32 pb-16 md:pb-32">
             <h3 className="text-2xl md:text-3xl text-accent font-semibold">
                 Browse {currentCategory.name}
             </h3>

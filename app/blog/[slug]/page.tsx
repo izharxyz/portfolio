@@ -61,7 +61,7 @@ export default async function BlogPost({
     const post: PostDetail = await response.json();
 
     return (
-        <div className="min-h-[100svh] w-screen overflow-x-hidden">
+        <div className="min-h-[100svh] w-screen overflow-x-hidden mb-16 md:mb-32">
             <div className="h-[100svh] w-full container relative">
                 <Image
                     src={post.image}

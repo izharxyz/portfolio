@@ -54,7 +54,7 @@ export default async function Blog() {
     const featuredPost: Post = await featuredResponse.json();
 
     return (
-        <div className="container w-full h-fit">
+        <div className="container w-full h-fit pt-32 pb-16 md:pb-32">
             <FeaturedCard post={featuredPost} />
 
             <div className="pt-16 md:pt-32 text-left">

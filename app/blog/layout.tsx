@@ -6,9 +6,9 @@ export default function BlogLayout({
     children: React.ReactNode;
 }) {
     return (
-        <main className="pt-32 pb-16 md:pb-32 min-h-screen">
+        <main className="min-h-[100svh]">
             {children}
-            <div className="container mt-16 md:mt-32">
+            <div className="container mb-16 md:mb-32">
                 <div className="h-96 relative border">
                     <div className="absolute inset-0 h-full w-full flex flex-col justify-center items-center p-4">
                         <h4 className="text-2xl md:text-3xl uppercase text-foreground text-center w-full tracking-tight">
