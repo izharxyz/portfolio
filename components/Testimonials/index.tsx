@@ -7,7 +7,7 @@ import { TextHoverEffect } from "@/components/ui/TextHoverEffect";
 import { ShootingStars } from "@/components/ui/ShootingStars";
 import { StarsBackground } from "@/components/ui/StarsBackground";
 
-export function Testimonials() {
+export default function Testimonials() {
     const cardContainerRef = useRef<HTMLDivElement | null>(null);
     const [spacerHeight, setSpacerHeight] = useState(0);
 
