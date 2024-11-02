@@ -105,7 +105,7 @@ export default async function BlogPost({
                     </div>
                 </div>
             </div>
-            <article className="prose lg:prose-lg prose-zinc dark:prose-invert prose-pre:bg-secondary prose-pre:text-secondary-foreground container max-w-4xl">
+            <article className="prose-sm lg:prose-base prose-zinc dark:prose-invert prose-pre:bg-secondary prose-pre:text-secondary-foreground container max-w-4xl">
                 {post.content.map((content, idx) => (
                     <div className="space-y-5" key={idx}>
                         {content.image && (
