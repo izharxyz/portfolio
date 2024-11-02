@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 import { TextHoverEffect } from "@/components/ui/TextHoverEffect";
-import Typewriter from "@/components/ui/TypewriterInfinite";
+import { FlipWords } from "@/components/ui/FlipWordsEffect";
 import Link from "next/link";
 
 export default function About() {
@@ -27,12 +27,11 @@ export default function About() {
                     <TextHoverEffect text="ABOUT" />
                 </div>
 
-                <Typewriter
-                    textList={["Developer", "Designer", "Problem solver"]}
-                    typingSpeed={150}
-                    deletingSpeed={100}
-                    pauseTime={1500}
-                />
+                <div>
+                    <FlipWords
+                        words={["Developer", "Designer", "Problem solver"]}
+                    />
+                </div>
 
                 <p className="text-muted-foreground text-lg mt-10">
                     Hello! I&apos;m Mohamed Izhar, a passionate web developer
