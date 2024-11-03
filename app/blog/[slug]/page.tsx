@@ -89,11 +89,11 @@ export default async function BlogPost({
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
                             {post.title}
                         </h1>
-                        <div className="mt-5 flex gap-2 justify-start items-center w-full">
+                        <div className="mt-5 flex flex-wrap gap-2 justify-start items-center w-full">
                             {post.categories?.map((category) => (
                                 <span
                                     key={category.id}
-                                    className="text-xs md:text-sm uppercase text-purple-800 dark:text-purple-400 border border-purple-800 dark:border-purple-400 py-1 px-3 rounded-full bg-accent/10 backdrop-blur-xl"
+                                    className="text-xs text-nowrap md:text-sm uppercase text-purple-800 dark:text-purple-400 border border-purple-800 dark:border-purple-400 py-1 px-3 rounded-full bg-accent/10 backdrop-blur-xl"
                                 >
                                     {category.name}
                                 </span>
@@ -105,7 +105,7 @@ export default async function BlogPost({
                     </div>
                 </div>
             </div>
-            <article className="prose-sm lg:prose-base prose-zinc dark:prose-invert prose-pre:bg-secondary prose-pre:text-secondary-foreground container max-w-4xl">
+            <article className="prose-sm lg:prose-base prose-zinc dark:prose-invert prose-pre:bg-secondary prose-pre:text-secondary-foreground prose-pre:overflow-x-auto prose-h1:font-bold prose-h2:font-bold prose-h3:font-bold prose-h4:font-bold container max-w-4xl">
                 {post.content.map((content, idx) => (
                     <div className="space-y-5" key={idx}>
                         {content.image && (
@@ -113,7 +113,7 @@ export default async function BlogPost({
                                 <Image
                                     src={content.image}
                                     alt={"article content image"}
-                                    width={1000}
+                                    width={1900}
                                     height={1000}
                                     className="w-full h-full aspect-video object-cover"
                                 />

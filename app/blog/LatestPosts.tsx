@@ -13,7 +13,7 @@ export default async function LatestPosts() {
     if (posts.results.length < 12) {
         const repeatedPosts = [];
         while (repeatedPosts.length < 12) {
-            repeatedPosts.push(...posts.results.reverse());
+            repeatedPosts.push(...posts.results);
         }
         // Slice the array to get exactly 12 posts
         posts.results = repeatedPosts.slice(0, 12);
