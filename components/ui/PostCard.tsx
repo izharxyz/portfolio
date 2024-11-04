@@ -23,9 +23,11 @@ export default function Card({ post }: { post: Post }) {
                     </div>
                 </Link>
             </div>
-            <div className="flex gap-2 mt-4 text-accent text-xs md:text-sm uppercase">
+            <div className="flex gap-2 flex-wrap mt-4 text-accent text-xs md:text-sm uppercase">
                 {post.categories?.map((category) => (
-                    <span key={category.id}>{category.name}</span>
+                    <span key={category.id} className="text-nowrap">
+                        {category.name}
+                    </span>
                 ))}
             </div>
             <h3 className="text-lg md:text-xl font-semibold mt-4">
