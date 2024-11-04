@@ -5,6 +5,7 @@ import { PostDetail } from "@/types";
 import { CgCalendarTwo } from "react-icons/cg";
 
 import RelatedPosts from "./RelatedPosts";
+import SocialShare from "./SocialShare";
 
 export async function generateMetadata({
     params,
@@ -99,7 +100,10 @@ export default async function BlogPost({
                                 </span>
                             ))}
                         </div>
-                        <p className="text-foreground text-sm md:text-base mt-4">
+                        <div className="mt-8">
+                            <SocialShare title={post.title} slug={post.slug} />
+                        </div>
+                        <p className="text-foreground text-sm md:text-base mt-8">
                             {post.description}
                         </p>
                     </div>
