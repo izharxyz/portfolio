@@ -109,7 +109,7 @@ export default async function BlogPost({
                     </div>
                 </div>
             </div>
-            <article className="prose-sm lg:prose-base prose-zinc dark:prose-invert prose-pre:bg-secondary prose-pre:text-secondary-foreground prose-pre:overflow-x-auto prose-h1:font-bold prose-h2:font-bold prose-h3:font-bold prose-h4:font-bold container max-w-4xl">
+            <article className="prose-sm lg:prose-base prose-zinc dark:prose-invert prose-pre:bg-secondary prose-pre:text-secondary-foreground prose-pre:overflow-x-auto prose-h1:font-bold prose-h2:font-bold prose-h3:font-bold prose-h4:font-bold prose-blockquote:border-l-2 prose-blockquote:border-accent prose-blockquote:italic container max-w-4xl">
                 {post.content.map((content, idx) => (
                     <div className="space-y-5" key={idx}>
                         {content.image && (
