@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import Link from "next/link";
 
-import { useAnimate } from "framer-motion";
+import { useAnimate, stagger } from "framer-motion";
 
 import { SparklesCore } from "@/components/ui/Sparkles";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
@@ -38,25 +39,25 @@ export default function Hero() {
         },
     ];
 
-    // const [scope, animate] = useAnimate();
+    const [scope, animate] = useAnimate();
 
-    // useEffect(() => {
-    //     const timeout = setTimeout(() => {
-    //         animate(
-    //             "li",
-    //             {
-    //                 opacity: 1,
-    //                 y: 0,
-    //             },
-    //             {
-    //                 duration: 1,
-    //                 delay: stagger(0.5),
-    //             }
-    //         );
-    //     }, 2 * 1000);
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            animate(
+                "li",
+                {
+                    opacity: 1,
+                    y: 0,
+                },
+                {
+                    duration: 1,
+                    delay: stagger(0.5),
+                }
+            );
+        }, 2 * 1000);
 
-    //     return () => clearTimeout(timeout);
-    // }, [scope.current]);
+        return () => clearTimeout(timeout);
+    }, [scope.current]);
 
     return (
         <section className="h-screen w-full px-4 relative flex flex-col items-center justify-center overflow-hidden text-pur">
@@ -81,17 +82,26 @@ export default function Hero() {
                     <TypewriterEffect words={words} />
                 </div>
 
-                {/* {Array.isArray(links) && links.length > 0 && (
-          <ul ref={scope} className="flex flex-col md:flex-row gap-4 relative">
-            {links.map(({ link }, i) => {
-              return (
-                <li key={i} className="opacity-0">
-                  <CMSLink {...link} />
-                </li>
-              )
-            })}
-          </ul>
-        )} */}
+                <ul
+                    ref={scope}
+                    className="flex flex-col md:flex-row gap-4 relative"
+                >
+                    <li className="opacity-0">
+                        <Link href="#contact" className="btn-primary">
+                            Contact me
+                        </Link>
+                    </li>
+                    <li className="opacity-0">
+                        <Link
+                            href="https://raw.githubusercontent.com/izharxyz/resume/refs/heads/main/resume-izhar.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-outline"
+                        >
+                            Resume
+                        </Link>
+                    </li>
+                </ul>
             </div>
         </section>
     );
