@@ -75,3 +75,12 @@ body {
         @apply bg-background text-foreground;
     }
 }
+
+@layer components {
+    .btn-primary {
+        @apply py-4 px-8 bg-primary text-primary-foreground text-xs uppercase;
+    }
+    .btn-outline {
+        @apply py-4 px-8 border border-primary text-primary text-xs uppercase;
+    }
+}

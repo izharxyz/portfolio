@@ -9,9 +9,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "@/components/ui/Logo";
 import HorizontalLine from "@/components/ui/HorizontalLine";
 import ThemeToggler from "@/components/ThemeToggler";
-import { Button } from "@/components/ui/Button";
-
-// import Search from "./Search";
+import Button from "@/components/ui/Button";
 
 const navs = [
     { text: "About", href: "/#about" },

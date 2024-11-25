@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Button = ({ children }: { children: React.ReactNode }) => {
+export default function Button({ children }: { children: React.ReactNode }) {
     return (
         <button className="relative inline-flex h-10 md:h-12 overflow-hidden rounded-full p-[2px] md:p-[3px]">
             {/* gradient blue-500 purple-600 blue-500 */}
@@ -10,12 +10,4 @@ export const Button = ({ children }: { children: React.ReactNode }) => {
             </span>
         </button>
     );
-};
-
-export const PrimaryButton = ({ children }: { children: React.ReactNode }) => {
-    return (
-        <button className="py-4 px-8 bg-primary text-primary-foreground text-xs uppercase">
-            {children}
-        </button>
-    );
-};
+}

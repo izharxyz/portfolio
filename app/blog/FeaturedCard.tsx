@@ -4,7 +4,6 @@ import Link from "next/link";
 import { RiTimer2Line } from "react-icons/ri";
 import { CgCalendarTwo } from "react-icons/cg";
 
-import { PrimaryButton } from "@/components/ui/Button";
 import { Post } from "@/types";
 
 export default function FeaturedCard({ post }: { post: Post }) {
@@ -60,8 +59,11 @@ export default function FeaturedCard({ post }: { post: Post }) {
                             <RiTimer2Line className="h-5 w-5 mr-2" />
                             <span>5 min read</span>
                         </div>
-                        <Link href={`/blog/${post.slug}`}>
-                            <PrimaryButton>Read more</PrimaryButton>
+                        <Link
+                            href={`/blog/${post.slug}`}
+                            className="btn-primary"
+                        >
+                            Read more
                         </Link>
                     </div>
                 </div>

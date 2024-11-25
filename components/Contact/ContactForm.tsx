@@ -120,7 +120,7 @@ export default function ContactForm() {
             <div className="flex w-full justify-end items-center">
                 <button
                     type="submit"
-                    className="bg-primary text-primary-foreground py-5 px-8 uppercase text-xs transition duration-300"
+                    className="btn-primary"
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? <Loader /> : "Send Message"}

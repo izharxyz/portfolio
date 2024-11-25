@@ -56,7 +56,7 @@ export default function About() {
                         href="https://raw.githubusercontent.com/izharxyz/resume/refs/heads/main/resume-izhar.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs py-5 px-8 bg-primary text-primary-foreground uppercase"
+                        className="btn-outline"
                     >
                         Resume
                     </Link>
