@@ -118,7 +118,10 @@ export default function Header() {
                         <RxCross1 className="h-5 w-5" />
                     </button>
                 </div>
-                <h3 className="text-lg uppercase text-foreground text-center mb-10">
+                <h3
+                    className="text-lg uppercase text-foreground text-center mb-10"
+                    onClick={() => setIsMenuOpen(false)}
+                >
                     <Logo height={48} width={48} />
                 </h3>
                 <HorizontalLine />

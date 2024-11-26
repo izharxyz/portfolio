@@ -82,12 +82,12 @@ export default function Hero() {
                     <TypewriterEffect words={words} />
                 </div>
 
-                <ul
-                    ref={scope}
-                    className="flex flex-col md:flex-row gap-4 relative"
-                >
+                <ul ref={scope} className="flex flex-row gap-4 relative">
                     <li className="opacity-0">
-                        <Link href="#contact" className="btn-primary">
+                        <Link
+                            href="#contact"
+                            className="btn-primary text-nowrap"
+                        >
                             Contact me
                         </Link>
                     </li>
