@@ -30,6 +30,7 @@ export default function About() {
                 <div>
                     <FlipWords
                         words={["Developer", "Designer", "Problem solver"]}
+                        duration={1500}
                     />
                 </div>
 
@@ -56,7 +57,7 @@ export default function About() {
                         href="https://raw.githubusercontent.com/izharxyz/resume/refs/heads/main/resume-izhar.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-outline"
+                        className="btn-outline border-muted-foreground text-muted-foreground hover:border-primary hover:text-primary transition duration-300"
                     >
                         Resume
                     </Link>
