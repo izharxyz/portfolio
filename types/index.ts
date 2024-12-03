@@ -18,6 +18,16 @@ export interface project {
     updated_at: string;
 }
 
+export interface Testimonial {
+    id: number;
+    name: string;
+    designation: string;
+    quote: string;
+    avatar: string;
+    created_at: string;
+    updated_at: string;
+}
+
 export interface Category {
     id: number;
     name: string;
