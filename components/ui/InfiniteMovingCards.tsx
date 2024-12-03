@@ -4,6 +4,8 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
+import { Testimonial } from "@/types";
+
 export const InfiniteMovingCards = ({
     items,
     direction = "left",
@@ -11,11 +13,7 @@ export const InfiniteMovingCards = ({
     pauseOnHover = true,
     className,
 }: {
-    items: {
-        quote: string;
-        name: string;
-        avatar: string;
-    }[];
+    items: Testimonial[];
     direction?: "left" | "right";
     speed?: "fast" | "normal" | "slow";
     pauseOnHover?: boolean;
@@ -120,6 +118,9 @@ export const InfiniteMovingCards = ({
 
                                     <div className="text-foreground">
                                         {item.name}
+                                        <p className="text-sm text-muted-foreground">
+                                            {item.designation}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
