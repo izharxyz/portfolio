@@ -44,7 +44,7 @@ export default function Footer() {
                         Contact
                     </Link>
                     <Link
-                        href="/#blog"
+                        href="/blog"
                         className="hover:text-primary duration-300"
                     >
                         Blog
@@ -86,7 +86,8 @@ export default function Footer() {
                     </Link>
                 </div>
                 <p className="text-muted-foreground text-sm md:text-base">
-                    &copy; 2024 Mohamed Izhar. All rights reserved.
+                    &copy; {new Date().getFullYear()} Mohamed Izhar. All rights
+                    reserved.
                 </p>
             </div>
         </footer>
