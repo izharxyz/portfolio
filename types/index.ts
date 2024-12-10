@@ -45,6 +45,7 @@ export interface Post {
     image: string;
     categories?: Category[] | null;
     slug: string;
+    reading_time: number;
     created_at: string;
     updated_at: string;
 }

@@ -57,7 +57,7 @@ export default function FeaturedCard({ post }: { post: Post }) {
                     <div className="flex flex-row justify-between gap-5 md:flex-row-reverse md:justify-end items-center w-full">
                         <div className="text-muted-foreground text-xs md:text-sm font-light uppercase flex items-center justify-start">
                             <RiTimer2Line className="h-5 w-5 mr-2" />
-                            <span>5 min read</span>
+                            <span>{post.reading_time} min read</span>
                         </div>
                         <Link
                             href={`/blog/${post.slug}`}
