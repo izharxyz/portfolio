@@ -26,7 +26,7 @@ export default function Contact() {
                             <p className="text-muted-foreground">Mail me at</p>
                             <Link
                                 href="mailto:mohamed@izhar.xyz"
-                                className="text-purple-600 font-semibold text-lg lg:text-xl mt-1"
+                                className="text-primary font-semibold text-lg lg:text-xl mt-1"
                             >
                                 mohamed@izhar.xyz
                             </Link>
@@ -36,9 +36,9 @@ export default function Contact() {
 
                 <div className="flex w-full items-center justify-center lg:justify-end">
                     <div className="lg:max-w-xl w-full border p-5 lg:p-10">
-                        <h4 className="text-xl lg:text-2xl font-semibold">
+                        <p className="text-xl lg:text-2xl font-semibold">
                             Send me a message
-                        </h4>
+                        </p>
                         <ContactForm />
                     </div>
                 </div>

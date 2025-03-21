@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -96,6 +97,7 @@ export default function Header() {
                         <button
                             className="lg:hidden"
                             onClick={() => setIsMenuOpen(true)}
+                            aria-label="Open Navigation Menu"
                         >
                             <AiOutlineMenu className="h-5 w-5 text-foreground" />
                         </button>
@@ -112,18 +114,24 @@ export default function Header() {
             >
                 <div className="flex items-center justify-end">
                     <button
-                        className="text-foreground"
+                        className="text-foreground p-3"
                         onClick={() => setIsMenuOpen(false)}
+                        aria-label="Close Navigation Menu"
                     >
                         <RxCross1 className="h-5 w-5" />
                     </button>
                 </div>
-                <h3
-                    className="text-lg uppercase text-foreground text-center mb-10"
+
+                {/* not using logo component for accessiblity reasons. onClick is required */}
+                <Link
                     onClick={() => setIsMenuOpen(false)}
+                    href="/"
+                    className="w-full flex items-center justify-center mb-10"
+                    aria-label="Go to Home"
                 >
-                    <Logo height={48} width={48} />
-                </h3>
+                    <Image src="/logo.svg" height={48} width={48} alt="logo" />
+                </Link>
+
                 <HorizontalLine />
                 <div className="flex flex-col gap-4 py-10 p-5 text-center font-light">
                     {navs.map((link, idx) => (

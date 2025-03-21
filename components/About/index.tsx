@@ -58,6 +58,7 @@ export default function About() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-outline border-muted-foreground text-muted-foreground hover:border-primary hover:text-primary transition duration-300"
+                        aria-label="Download my resume in PDF format"
                     >
                         Resume
                     </Link>
@@ -67,6 +68,7 @@ export default function About() {
                         className="hover:text-primary hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Visit my GitHub profile"
                     >
                         <FaGithub className="h-7 w-7 lg:h-8 lg:w-8" />
                     </Link>
@@ -75,14 +77,16 @@ export default function About() {
                         className="hover:text-primary hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Connect with me on LinkedIn"
                     >
                         <FaLinkedin className="h-7 w-7 lg:h-8 lg:w-8" />
                     </Link>
                     <Link
-                        href="#"
+                        href="https://twitter.com/#"
                         className="hover:text-primary hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Follow me on Twitter"
                     >
                         <FaXTwitter className="h-7 w-7 lg:h-8 lg:w-8" />
                     </Link>

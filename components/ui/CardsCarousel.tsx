@@ -107,6 +107,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     className="absolute -left-2 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/70 border flex items-center justify-center disabled:opacity-30 transition duration-300"
                     onClick={scrollLeft}
                     disabled={!canScrollLeft}
+                    aria-label="Scroll Left"
                 >
                     <FaArrowLeftLong className="h-4 w-4 text-muted-foreground" />
                 </button>
@@ -114,6 +115,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     className="absolute -right-2 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 md:h-12 md:w-12 rounded-full bg-background/70 border flex items-center justify-center disabled:opacity-30 transition duration-300"
                     onClick={scrollRight}
                     disabled={!canScrollRight}
+                    aria-label="Scroll Right"
                 >
                     <FaArrowRightLong className="h-4 w-4 text-muted-foreground" />
                 </button>

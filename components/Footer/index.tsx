@@ -65,6 +65,7 @@ export default function Footer() {
                         className="hover:text-primary hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Visit my GitHub profile"
                     >
                         <FaGithub className="h-6 w-6 md:h-7 md:w-7" />
                     </Link>
@@ -73,6 +74,7 @@ export default function Footer() {
                         className="hover:text-primary hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Connect with me on LinkedIn"
                     >
                         <FaLinkedin className="h-6 w-6 md:h-7 md:w-7" />
                     </Link>
@@ -81,6 +83,7 @@ export default function Footer() {
                         className="hover:text-primary hover:scale-110 duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Follow me on X (formerly Twitter)"
                     >
                         <FaXTwitter className="h-6 w-6 md:h-7 md:w-7" />
                     </Link>

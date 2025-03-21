@@ -15,6 +15,10 @@ export default function ThemeToggler() {
     return (
         <button
             onClick={() => toggleTheme()}
+            aria-label={
+                isDark ? "Switch to light theme" : "Switch to dark theme"
+            }
+            title={isDark ? "Switch to light theme" : "Switch to dark theme"}
             className="flex h-full items-center justify-center cursor-pointer p-2"
         >
             <div
