@@ -4,6 +4,7 @@ import TechStackParallax from "@/components/TechStack";
 import Work from "@/components/Work";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
+import BlogPosts from "@/components/BlogPost";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <About />
             <TechStackParallax />
             <Work />
+            <BlogPosts />
             <Testimonials />
             <Contact />
         </main>
