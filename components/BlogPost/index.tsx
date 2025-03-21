@@ -13,14 +13,14 @@ export default async function BlogPosts() {
     console.log(posts);
 
     return (
-        <section id="blog" className="pt-16 md:pt-32">
+        <section id="blog" className="pt-32">
             <div className="w-full max-w-2xl mx-auto h-48 -mt-14 z-30">
-                <TextHoverEffect text="BLOGS" />
+                <TextHoverEffect text="BLOG" />
             </div>
             <h2 className="container text-4xl md:text-5xl mb-5 font-bold text-purple-600 text-center">
                 Dive into my thoughts
             </h2>
-            <p className="text-muted-foreground text-sm md:text-base text-center mb-10">
+            <p className="container text-muted-foreground text-sm md:text-base text-center mb-10">
                 Explore my latest blog posts and read about my experiences,
                 thoughts, and ideas.{" "}
                 <Link
